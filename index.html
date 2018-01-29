@@ -240,15 +240,21 @@
           <ul class="search-results"></ul>
         <div id="toc" class="toc-list-h1">
             <li>
-              <a href="#reporting-api" class="toc-h1 toc-link" data-title="reporting-api">Reporting API</a>
+              <a href="#resources" class="toc-h1 toc-link" data-title="resources">Resources</a>
                 <ul class="toc-list-h2">
                     <li>
-                      <a href="#getting-started" class="toc-h2 toc-link" data-title="getting-started">Getting started</a>
+                      <a href="#organisation" class="toc-h2 toc-link" data-title="organisation">Organisation</a>
+                    </li>
+                    <li>
+                      <a href="#transaction" class="toc-h2 toc-link" data-title="transaction">Transaction</a>
+                    </li>
+                    <li>
+                      <a href="#deposit" class="toc-h2 toc-link" data-title="deposit">Deposit</a>
+                    </li>
+                    <li>
+                      <a href="#dispute" class="toc-h2 toc-link" data-title="dispute">Dispute</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-              <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
             </li>
             <li>
               <a href="#version" class="toc-h1 toc-link" data-title="version">Version</a>
@@ -276,16 +282,15 @@
       <div class="page-wrapper">
         <div class="dark-box"></div>
         <div class="content">
-          <h1 id='reporting-api'>Reporting API</h1>
-<p>Sometimes there is need for more specialized reporting, beyond what is available in the Dashboard.</p>
+          <h1 id='resources'>Resources</h1>
+<p>Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.</p>
 
-<p>Globalpayments Reporting API gathers transaction data from start to finish, enabling you to gain valuable insights anywhere along the chain.</p>
+<p>Resources have a Status, Type, Data and Relationships to other entities. </p>
 
-<p>The API is designed to be as flexible as possible. Our engine takes on all the heavy lifting in the backend. 
-You can create your own reporting tool and access all of your account information using the API. Our API returns data in the JSON format, allowing you the ability to slot your new data stream directly into your existing workflow - quickly and easily.</p>
+<p>Requests are actions that are taken to affect Resources.</p>
 
-<p>This API reference outlines the expected requests and responses to use GlobalPayments Reporting API.</p>
-<h2 id='getting-started'>Getting started</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
+<p>Each instance of a Resource has a unique GPN generated ID. </p>
+<h2 id='organisation'>Organisation</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">gp_rep</span>
@@ -302,16 +307,16 @@ curl <span class="s2">"api_endpoint_here"</span>
 <p>Make sure to replace <code>success</code> with your API key.</p>
 </blockquote>
 
-<p>Reporting API provides a number of ways of connecting and formatting requests, so you can choose what works best for your platform.</p>
+<p>Organisations are typically businesses that have a contracted with GPN. GPN provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by GPN.</p>
 
-<p>Choose your flavor from the tabs on the code pane. We have a wide selection of JSON wrappers for all popular languages.</p>
+<p>A Merchant Organisaion which has a contractual relationship with a processor for the provision of financial payment services, and/or technical payment services.  </p>
 
-<p>REST (JSON) - recommended
-SOAP
-cURL
-PHP
-This reference focusses on REST using JSON and SOAP in examples. The other interfaces follow the same structure and the endpoints are provided for each.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>A Marketplace Organisation which has a contractual relationship with a Processor to resell or refer a Processor&#39;s financial payment services and/or technical payment services.
+Merchants contract with Marketplaces </p>
+
+<p>An ISO Organisation which has a contractual relationship with a Processor to resell or refer a Processor&#39;s financial payment services and/or technical payment services.
+Merchants contract with ISOs</p>
+
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
@@ -331,16 +336,16 @@ curl <span class="s2">"api_endpoint_here"</span>
 <blockquote>
 <p>Make sure to replace <code>success</code> with your API key.</p>
 </blockquote>
+<h2 id='transaction'>Transaction</h2>
+<p>An act to attempt the transfer of funds between the Customer and the Merchant</p>
 
-<p>gp_rep uses API keys to allow access to the API. You can register a new gp_rep API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>A Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the former to the latter</p>
 
-<p>gp_rep expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: success</code></p>
-
-<aside class="notice">
-You must replace <code>success</code> with your personal API key.
-</aside>
+<p>A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the latter to the former</p>
+<h2 id='deposit'>Deposit</h2>
+<p>The initation of a Debit or a Credit to a Merchant&#39;s Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.</p>
+<h2 id='dispute'>Dispute</h2>
+<p>An act, initiated by the Customer to challenge and reverse the transfer of funds between that Customer and the Merchant</p>
 <h1 id='version'>Version</h1><h2 id='get-all-report-obs'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
