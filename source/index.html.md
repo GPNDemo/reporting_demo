@@ -20,18 +20,18 @@ includes:
 search: true
 ---
 
-# Reporting API
+# Resources
 
-Sometimes there is need for more specialized reporting, beyond what is available in the Dashboard.
+Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.
 
-Globalpayments Reporting API gathers transaction data from start to finish, enabling you to gain valuable insights anywhere along the chain.
+Resources have a Status, Type, Data and Relationships to other entities. 
 
-The API is designed to be as flexible as possible. Our engine takes on all the heavy lifting in the backend. 
-You can create your own reporting tool and access all of your account information using the API. Our API returns data in the JSON format, allowing you the ability to slot your new data stream directly into your existing workflow - quickly and easily.
+Requests are actions that are taken to affect Resources.
 
-This API reference outlines the expected requests and responses to use GlobalPayments Reporting API.
+Each instance of a Resource has a unique GPN generated ID. 
 
-## Getting started
+
+## Organisation
 
 ```ruby
 require 'gp_rep'
@@ -59,19 +59,17 @@ let api = gp_rep.authorize('success');
 
 > Make sure to replace `success` with your API key.
 
-Reporting API provides a number of ways of connecting and formatting requests, so you can choose what works best for your platform.
+Organisations are typically businesses that have a contracted with GPN. GPN provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by GPN.
 
-Choose your flavor from the tabs on the code pane. We have a wide selection of JSON wrappers for all popular languages.
+A Merchant Organisaion which has a contractual relationship with a processor for the provision of financial payment services, and/or technical payment services.  
 
-REST (JSON) - recommended
-SOAP
-cURL
-PHP
-This reference focusses on REST using JSON and SOAP in examples. The other interfaces follow the same structure and the endpoints are provided for each.
+A Marketplace Organisation which has a contractual relationship with a Processor to resell or refer a Processor's financial payment services and/or technical payment services.
+Merchants contract with Marketplaces 
+
+An ISO Organisation which has a contractual relationship with a Processor to resell or refer a Processor's financial payment services and/or technical payment services.
+Merchants contract with ISOs
 
 
-
-# Authentication
 
 > To authorize, use this code:
 
@@ -101,15 +99,22 @@ let api = gp_rep.authorize('success');
 
 > Make sure to replace `success` with your API key.
 
-gp_rep uses API keys to allow access to the API. You can register a new gp_rep API key at our [developer portal](http://example.com/developers).
 
-gp_rep expects for the API key to be included in all API requests to the server in a header that looks like the following:
+## Transaction
 
-`Authorization: success`
+An act to attempt the transfer of funds between the Customer and the Merchant
 
-<aside class="notice">
-You must replace <code>success</code> with your personal API key.
-</aside>
+A Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the former to the latter
+
+A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the latter to the former
+
+## Deposit
+
+The initation of a Debit or a Credit to a Merchant's Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.
+
+## Dispute
+
+An act, initiated by the Customer to challenge and reverse the transfer of funds between that Customer and the Merchant
 
 # Version
 
