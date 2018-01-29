@@ -439,7 +439,7 @@ header{/* position:fixed; */top:0;left:0;right:0;/* z-index: 200; *//* display:n
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>div {
+  &>h1, &>h2, & > h3, &>div {
     clear:both;
   }
 
