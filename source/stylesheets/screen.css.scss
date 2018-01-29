@@ -24,6 +24,8 @@ under the License.
 // GENERAL STUFF
 ////////////////////////////////////////////////////////////////////////////////
 
+
+
 html, body {
   color: $main-text;
   padding: 0;
@@ -255,6 +257,18 @@ header{/* position:fixed; */top:0;left:0;right:0;/* z-index: 200; *//* display:n
     font-size: 12px;
     color:$nav-text-child;
   }
+
+  .toc-list-h3 {
+  display: none;
+  background-color: $nav-subitem-bg;
+  font-weight: 500;
+}
+
+.toc-h3 {
+  padding-left: $nav-padding + $nav-padding + $nav-indent;
+  font-size: 12px;
+  color:$nav-text-child;
+}
 
   .toc-footer {
     padding: 1em 0;

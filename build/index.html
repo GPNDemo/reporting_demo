@@ -336,17 +336,17 @@ curl <span class="s2">"api_endpoint_here"</span>
 <blockquote>
 <p>Make sure to replace <code>success</code> with your API key.</p>
 </blockquote>
-<h2 id='transaction'>Transaction</h2>
+<h3 id='new'>new</h3><h3 id='read'>read</h3><h3 id='edit'>edit</h3><h3 id='disable'>disable</h3><h2 id='transaction'>Transaction</h2>
 <p>An act to attempt the transfer of funds between the Customer and the Merchant</p>
 
 <p>A Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the former to the latter</p>
 
 <p>A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the latter to the former</p>
-<h2 id='deposit'>Deposit</h2>
+<h3 id='authorise'>authorise</h3><h3 id='preauthorised'>preauthorised</h3><h3 id='cancel'>cancel</h3><h3 id='refund'>refund</h3><h3 id='return'>return</h3><h3 id='batch'>batch</h3><h3 id='read-2'>read</h3><h3 id='hold'>hold</h3><h3 id='release'>release</h3><h3 id='adjust'>adjust</h3><h3 id='force'>force</h3><h3 id='edit-2'>edit</h3><h2 id='deposit'>Deposit</h2>
 <p>The initation of a Debit or a Credit to a Merchant&#39;s Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.</p>
 <h2 id='dispute'>Dispute</h2>
 <p>An act, initiated by the Customer to challenge and reverse the transfer of funds between that Customer and the Merchant</p>
-<h1 id='version'>Version</h1><h2 id='get-all-report-obs'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
+<h3 id='notify'>notify</h3><h3 id='challenge'>challenge</h3><h3 id='read-3'>read</h3><h3 id='edit-3'>edit</h3><h3 id='resolve'>resolve</h3><h1 id='version'>Version</h1><h2 id='get-all-report-obs'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">r_eng</span><span class="p">.</span><span class="nf">get</span>

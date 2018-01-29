@@ -99,6 +99,10 @@ let api = gp_rep.authorize('success');
 
 > Make sure to replace `success` with your API key.
 
+### new
+### read
+### edit
+### disable
 
 ## Transaction
 
@@ -108,6 +112,19 @@ A Payment is a transaction between a Customer and a Merchant in which the transf
 
 A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the latter to the former
 
+### authorise
+### preauthorised
+### cancel
+### refund
+### return
+### batch
+### read
+### hold
+### release
+### adjust
+### force
+### edit
+
 ## Deposit
 
 The initation of a Debit or a Credit to a Merchant's Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.
@@ -115,6 +132,14 @@ The initation of a Debit or a Credit to a Merchant's Bank Account relating to th
 ## Dispute
 
 An act, initiated by the Customer to challenge and reverse the transfer of funds between that Customer and the Merchant
+
+
+### notify
+### challenge
+### read
+### edit
+### resolve 
+
 
 # Version
 
