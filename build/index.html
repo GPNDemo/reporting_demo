@@ -406,16 +406,99 @@ Merchants contract with Marketplaces </p>
 <p>An <strong>ISO</strong> Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments&#39; services.
 Merchants contract with ISOs.</p>
 
-<p><strong>Organisation Statuses</strong>
-<strong><em>Status</em></strong> | <em>Description</em>| 
--------------- | -------------- 
-CREATED | This indicates that an Organisation or an Account has been created. 
-ACTIVE LIVE | This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.
-ACTIVE TEST | This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,
- DISABLED | This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account
-ERROR | Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit &amp; risk or information missing resulting in an incomplete application.</p>
-<h3 id='create'>create</h3><h3 id='read'>read</h3><h3 id='update'>update</h3><h2 id='account'>Account</h2>
+<p><strong>Organisation Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><em>Description</em></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CREATED</td>
+<td>This indicates that an Organisation or an Account has been created.</td>
+</tr>
+<tr>
+<td>ACTIVE LIVE</td>
+<td>This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.</td>
+</tr>
+<tr>
+<td>ACTIVE TEST</td>
+<td>This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit &amp; risk or information missing resulting in an incomplete application.</td>
+</tr>
+</tbody></table>
+<h3 id='create'>create</h3>
+<p>Used to create a new Organisation or Account on Global Payments&#39; system.</p>
+<h3 id='read'>read</h3>
+<p>Used to retrieve information about an existing Organisation or Account.</p>
+<h3 id='update'>update</h3>
+<p>Used to update information about an existing Organisation or Account.</p>
+<h2 id='account'>Account</h2>
 <p>A representation of a data needed to configure an Organisation to process payments. Typically this would information such as Organisation Deposit Bank Accounts, Allowed Functionality for that Account, Payment Method Specific details e.g. For Cards it would be the MID and TID.</p>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CREATED</td>
+<td>This indicates that an Organisation or an Account has been created.</td>
+</tr>
+<tr>
+<td>ACTIVE LIVE</td>
+<td>This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.</td>
+</tr>
+<tr>
+<td>ACTIVE TEST</td>
+<td>This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit &amp; risk or information missing resulting in an incomplete application.</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CREATED</td>
+<td>This indicates that an Organisation or an Account has been created.</td>
+</tr>
+<tr>
+<td>ACTIVE LIVE</td>
+<td>This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.</td>
+</tr>
+<tr>
+<td>ACTIVE TEST</td>
+<td>This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit &amp; risk or information missing resulting in an incomplete application.</td>
+</tr>
+</tbody></table>
 <h3 id='create-2'>create</h3>
 <p>Used to create a new Organisation or Account on Global Payments&#39; system</p>
 <h3 id='read-2'>read</h3>

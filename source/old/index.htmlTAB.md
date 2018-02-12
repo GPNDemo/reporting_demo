@@ -42,7 +42,6 @@ An **ISO** Organisation which has a contractual relationship with Global Payment
 Merchants contract with ISOs.
 
 **Organisation Statuses**
-
 ***Status*** | *Description*| 
 -------------- | -------------- 
 CREATED | This indicates that an Organisation or an Account has been created. 
@@ -50,38 +49,16 @@ ACTIVE LIVE | This indicates that an Organisation or an Account is in live mode 
 ACTIVE TEST | This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,
  DISABLED | This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account
 ERROR | Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit & risk or information missing resulting in an incomplete application.
+
+
  
 ### create
-Used to create a new Organisation or Account on Global Payments' system.
-
 ### read
-Used to retrieve information about an existing Organisation or Account.
-
 ### update
-Used to update information about an existing Organisation or Account.
 
 ## Account
 
 A representation of a data needed to configure an Organisation to process payments. Typically this would information such as Organisation Deposit Bank Accounts, Allowed Functionality for that Account, Payment Method Specific details e.g. For Cards it would be the MID and TID.
-
-
-Status | Description| 
--------------- | -------------- 
-CREATED | This indicates that an Organisation or an Account has been created. 
-ACTIVE LIVE | This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.
-ACTIVE TEST | This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,
- DISABLED | This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account
-ERROR | Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit & risk or information missing resulting in an incomplete application.
-
-
-Status | Description| 
--------------- | -------------- 
-CREATED | This indicates that an Organisation or an Account has been created. 
-ACTIVE LIVE | This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.
-ACTIVE TEST | This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,
-DISABLED | This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account
-ERROR | Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit & risk or information missing resulting in an incomplete application.
-
 
 ### create
 Used to create a new Organisation or Account on Global Payments' system
