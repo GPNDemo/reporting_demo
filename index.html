@@ -455,8 +455,6 @@
 <p><strong>Requests</strong> are actions that are taken to affect Resources.</p>
 
 <p>Each instance of a Resource has a unique <strong>Global Payments ID</strong>. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.</p>
-
-<hr>
 <h2 id='organisation'>Organisation</h2>
 <p>Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.</p>
 
@@ -520,8 +518,6 @@ These are the actions that can be taken to a Global Payments Organisation.</p>
 <p>Used to retrieve information about an existing Organisation.</p>
 <h3 id='update'>update</h3>
 <p>Used to update information about an existing Organisation.</p>
-
-<hr>
 <h2 id='account'>Account</h2>
 <p>A representation of a data needed to configure an Organisation to process payments. Typically this would information such as Organisation Deposit Bank Accounts, Allowed Functionality for that Account, Payment Method Specific details e.g. For Cards it would be the MID and TID.</p>
 
@@ -565,8 +561,6 @@ These are the actions that can be taken to Global Payments Organisations&#39; Ac
 <p>Used to retrieve information about an existing Account.</p>
 <h3 id='update-2'>update</h3>
 <p>Used to update information about an existing Account.</p>
-
-<hr>
 <h2 id='transaction'>Transaction</h2>
 <p>An act to attempt the transfer of funds between the Customer and the Merchant. </p>
 
@@ -655,8 +649,6 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 <p>Used to retrieve information about an existing Transaction.</p>
 <h3 id='update-3'>update</h3>
 <p>Used to update information about an existing Transaction. Can this incorporate adjust, cancel, hold, release?</p>
-
-<hr>
 <h2 id='deposit'>Deposit</h2>
 <p>The initiation of a Debit or a Credit to a Merchant&#39;s Bank Account that relates to Transactions and Disputes processed via Global Payments or fees charged by Global Payments to the Organisation. </p>
 
@@ -705,9 +697,7 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 </tbody></table>
 
 <p><strong>Deposit  Requests</strong></p>
-<h3 id='action1'>action1</h3><h3 id='action2'>action2</h3><h3 id='action3'>action3</h3>
-<hr>
-<h2 id='dispute'>Dispute</h2>
+<h3 id='action1'>action1</h3><h3 id='action2'>action2</h3><h3 id='action3'>action3</h3><h2 id='dispute'>Dispute</h2>
 <p>An act, initiated by the Customer or their bank, to challenge a previous transaction with a view to getting more information about that transaction or reversing the transfer of funds between that Customer and the Merchant for that transaction.</p>
 
 <p><strong>Dispute Types</strong></p>
@@ -755,9 +745,7 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 </tbody></table>
 
 <p><strong>Dispute  Requests</strong></p>
-<h3 id='notify'>notify</h3><h3 id='challenge'>challenge</h3><h3 id='read-4'>read</h3><h3 id='accept'>accept</h3><h3 id='update-4'>update</h3>
-<hr>
-<h2 id='resource1'>RESOURCE1</h2>
+<h3 id='notify'>notify</h3><h3 id='challenge'>challenge</h3><h3 id='read-4'>read</h3><h3 id='accept'>accept</h3><h3 id='update-4'>update</h3><h2 id='resource1'>RESOURCE1</h2>
 <p>Resource Description here</p>
 
 <p><strong>RESOURCE1 Types</strong></p>
@@ -805,9 +793,7 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 </tbody></table>
 
 <p><strong>RESOURCE1  Requests</strong></p>
-<h3 id='action1-2'>action1</h3><h3 id='action2-2'>action2</h3><h3 id='action3-2'>action3</h3>
-<hr>
-<h2 id='resource1-2'>RESOURCE1</h2>
+<h3 id='action1-2'>action1</h3><h3 id='action2-2'>action2</h3><h3 id='action3-2'>action3</h3><h2 id='resource1-2'>RESOURCE1</h2>
 <p>Resource Description here</p>
 
 <p><strong>RESOURCE1 Types</strong></p>
@@ -855,9 +841,7 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 </tbody></table>
 
 <p><strong>RESOURCE1  Requests</strong></p>
-<h3 id='action1-3'>action1</h3><h3 id='action2-3'>action2</h3><h3 id='action3-3'>action3</h3>
-<hr>
-<h2 id='resource1-3'>RESOURCE1</h2>
+<h3 id='action1-3'>action1</h3><h3 id='action2-3'>action2</h3><h3 id='action3-3'>action3</h3><h2 id='resource1-3'>RESOURCE1</h2>
 <p>Resource Description here</p>
 
 <p><strong>RESOURCE1 Types</strong></p>
@@ -905,9 +889,7 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 </tbody></table>
 
 <p><strong>RESOURCE1  Requests</strong></p>
-<h3 id='action1-4'>action1</h3><h3 id='action2-4'>action2</h3><h3 id='action3-4'>action3</h3>
-<hr>
-<h1 id='version'>Version</h1><h2 id='get-all-report-obs'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
+<h3 id='action1-4'>action1</h3><h3 id='action2-4'>action2</h3><h3 id='action3-4'>action3</h3><h1 id='version'>Version</h1><h2 id='get-all-report-obs'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">r_eng</span><span class="p">.</span><span class="nf">get</span>
