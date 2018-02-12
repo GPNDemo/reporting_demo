@@ -221,143 +221,98 @@ Organisation initiated request to accept a chargeback. An organisation understan
 
 
 
-## Customer
+## RESOURCE1
 
-A consumer or business, who does not typically have a contractual relationship with Global Payments, who wishes to engage in transactions with a Merchant. Customers buy products or services from a Merchant.
-
-
-**Customer Types**
-
-***Type*** | ***Description***
--------------- | -------------- 
- BUSINESS | The customer in this case is a business and is involved in a B2B relationship with a Global Payments' Organisation. 
- CONSUMER | The customer in this case is a consumer and is involved in a B2C relationship with a Global Payments' Organisation. 
- 
+Resource Description here
 
 
-**Customer Statuses**
-
-***Status*** | ***Description***
--------------- | -------------- 
-ACTIVE | This indicates that a Customer is active and can be used to process real transactions with.
-DISABLED | This indicates that a Customer can no longer be used for payment processing. The Customer resource is never deleted to maintain integrity and a record of historical activity. 
-
-**Customer  Requests**
-
-### *create*
-Used to create a new Customer on Global Payments' system
-
-### *read*
-Used to retrieve information about an existing Customer.
-
-### *update*
-Used to update information about an existing Customer.
-
-
-
-## Payment Method
-
-A payment instrument own by the Customer used in transactions to Global Payments for the purposes of Sale and Refund Transactions.
-
-
-**Payment Method Types**
+**RESOURCE1 Types**
 
 ***Type*** | ***Description***
 -------------- | -------------- 
- CARD | The payment instrument is a Customer's debit or credit card where a PAN and expiry date are stored securely by Global Payments.
- BANK ACCOUNT | The payment instrument is a Customer's bank account based payment method where a sort code/routing number and bank account number are stored securely by Global Payments.
- 
+ | 
+ | 
+ | 
 
 
-**Payment Method Statuses**
+**RESOURCE1 Statuses**
 
 ***Status*** | ***Description***
 -------------- | -------------- 
-ACTIVE | This indicates that the Payment Method is active and can be used to process real transactions with.
-DISABLED | This indicates that the Payment Method can no longer be used for payment processing. 
+ | 
+ | 
+ | 
 
-**Payment Method Requests**
 
-### *create*
-Used to create a new Payment Method on the Global Payments' system
+**RESOURCE1  Requests**
 
-### *read*
-Used to retrieve information about an existing Payment Method.
-
-### *update*
-Used to update information about an existing Payment Method.
+### *action1*
+### *action2*
+### *action3*
 
 
 
 
-## ORDER
+## RESOURCE1
 
-An Order is representation of an amount owed by a Customer to a Merchant. It has an amount and currency. An Order may be associated with multiple Transactions.
+Resource Description here
 
 
-**ORDER Types**
+**RESOURCE1 Types**
 
 ***Type*** | ***Description***
 -------------- | -------------- 
- STANDALONE | A once off standalone Order.
- RECURRING | An Order that requires a sequence of scheduled transactions to complete successfully, dictated by a Global Payments' Payment Schedule.
- 
+ | 
+ | 
+ | 
 
 
-**ORDER Statuses**
+**RESOURCE1 Statuses**
 
 ***Status*** | ***Description***
 -------------- | -------------- 
- OPEN | The Order is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Order but the amount has not been wholly or partially fulfilled.
- FULFILLED | The amount has been fulfilled with one or more transactions.
- CLOSED | The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.
+ | 
+ | 
+ | 
 
 
-**ORDER  Requests**
+**RESOURCE1  Requests**
 
-### *create*
-Used to create a new Order on the Global Payments' system
-
-### *read*
-Used to retrieve information about an existing Order.
-
-### *update*
-Used to update information about an existing Order.
+### *action1*
+### *action2*
+### *action3*
 
 
-## PAYMENT SCHEDULE
-
-A schedule of Transactions or Orders that need to be fulfilled.
 
 
-**PAYMENT SCHEDULE Types**
+## RESOURCE1
+
+Resource Description here
+
+
+**RESOURCE1 Types**
 
 ***Type*** | ***Description***
 -------------- | -------------- 
- STANDALONE | 
- RECURRING | 
- 
+ | 
+ | 
+ | 
 
 
-**PAYMENT SCHEDULE Statuses**
+**RESOURCE1 Statuses**
 
 ***Status*** | ***Description***
 -------------- | -------------- 
- OPEN | The Order is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Order but the amount has not been wholly or partially fulfilled.
- FULFILLED | The amount has been fulfilled with one or more transactions.
- CLOSED | The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.
+ | 
+ | 
+ | 
 
 
-**PAYMENT SCHEDULE  Requests**
+**RESOURCE1  Requests**
 
-### *create*
-Used to create a new Order on the Global Payments' system
-
-### *read*
-Used to retrieve information about an existing Order.
-
-### *update*
-Used to update information about an existing Order.
+### *action1*
+### *action2*
+### *action3*
 
 
 # Version
