@@ -56,13 +56,13 @@ ERROR | Indicating that an Organisation  was not successfully created or updated
 **Organisation Requests** 
 These are the actions that can be taken to a Global Payments Organisation.
 
-### *create*
+### create
 Used to create a new Organisation on Global Payments' system.
 
-### *read*
+### read
 Used to retrieve information about an existing Organisation.
 
-### *update*
+### update
 Used to update information about an existing Organisation.
 
 
@@ -86,13 +86,13 @@ ERROR | Indicating that an Account was not successfully created or updated. An e
 **Account Requests**
 These are the actions that can be taken to Global Payments Organisations' Accounts.
 
-### *create*
+### create
 Used to create a new Account on Global Payments' system
 
-### *read*
+### read
 Used to retrieve information about an existing Account.
 
-### *update*
+### update
 Used to update information about an existing Account.
 
 
@@ -123,40 +123,40 @@ An act to attempt the transfer of funds between the Customer and the Merchant.
 
 **Transaction Requests**
 
-### *authorise*
+### authorise
 Organisation initiated request to Authorise a transaction. If authorised successfully and flagged for auto-capture then the transaction would be have an OPEN-BATCH Status.  If successfully authorised and not flagged for auto-capture then the transaction would be have a PREAUTHORISED Status. A separate capture request is needed to move the transactions from a PREAUTHORISED status to an OPEN-BATCH status.
 
-### *cancel*
+### cancel
 Organisation initiated request to void a transaction. This can be applied to successful authorised/preauthorised transactions and stops the transaction from going further in its' lifecycle.
 This request must be executed before the Transaction has a status of BATCHED
 
-### *refund*
+### refund
 Organisation initiated request to Refund a Customer money. This can be linked to an previous Payment transaction or a standalone where it does not link to a previous Payment Transaction.
 
-### *adjust*
+### adjust
 Organisation initiated request to change the amount of a transaction that has a status of PREAUTHORISED or OPEN-BATCH. e.g. to add a tip.
 This request must be executed before the Transaction has a status of BATCHED
 
-### *capture*
+### capture
 Organisation initiated request to start the process of moving funds between the Customer and the Organisation. It changes a transaction with a status of PREAUTHORISED to have a status of OPEN-BATCH. 
 
-### *hold*
+### hold
 This is an organisation initiated request which If a transaction has an Open Batch status then putting it on hold removes it from the Open Batch but does not void the transaction. This could be used to pause a transaction for being processed in a Batch to check inventory or do fraud analysis
 
-### *release*
+### release
 If a Transaction has a current status of HELD then a release request will re-assign it a status of Open-Batch
 
-### *force*
+### force
 This is a request initiated by an Organisation that puts a transaction directly into an Open-Batch status and does not request an Authorisation/PreAuthorisation via the processor as the authcode has been attained elsewhere.
 
 ### close-batch
-Where does this sit? Do we need a Batch Resource
+Where does this sit?
 
 ### read
-Used to retrieve information about an existing Transaction or group of Transactions.
+Used to retrieve information about an existing Transaction.
 
 ### update
-Used to update information about an existing Transaction. *Can this incorporate adjust, cancel, hold, release?*
+Used to update information about an existing Transaction. Can this incorporate adjust, cancel, hold, release?
 
 
 
@@ -169,54 +169,88 @@ The initiation of a Debit or a Credit to a Merchant's Bank Account that relates 
 
 ***Type*** | ***Description***
 -------------- | -------------- 
- SPLIT | THe Deposi
-  
-  
+ | 
+ | 
+ | 
 
 
 **Deposit Statuses**
 
 ***Status*** | ***Description***
 -------------- | -------------- 
- DELAYED | The Deposit is been held in a Global Payments account for a period of time before being transferred to an Organisation's account.
- RESERVED | The Deposit is been held in a Global Payments account where it will be reviewed before it is released to an Organisation's account.
- DEPOSITED | The Deposit has been initiated to an Organisation's bank account.
+ DELAYED | 
+ RESERVED | 
+ DEPOSITED | 
  
+
+
+**Deposit  Requests**
+
+### action1
+### action2
+### action3
+
+
 
 ## Dispute
 
-An act, initiated by the Customer or their bank, to get more information about that transaction or to challenge a transaction with a view to reverse the transfer of funds between that Customer and the Merchant.
+An act, initiated by the Customer or their bank, to challenge a previous transaction with a view to getting more information about that transaction or reversing the transfer of funds between that Customer and the Merchant for that transaction.
 
 **Dispute Types**
 
 ***Type*** | ***Description***
 -------------- | -------------- 
- INQUIRY | An inquiry is a request for additional information on a transaction to validate the sale prior to the transaction being disputed. Normally the signed sales draft of the transaction is sufficient to resolve an inquiry request with the issuer. Not all disputes go through the inquiry phase first, majority of cardholder disputes are chargebacks and not retrievals. 
- CHARGEBACK | A dispute is created when a cardholder has a disagreement on a merchant processed transaction or the issuing bank has identified a transaction that was processed out of compliance. This results in a return of funds from the merchant to the cardholder. There can be many cycles of a dispute if the issuer and acquirer can't easily resolve the dispute case.  
- REPRESENTMENT |  A reversal of a previous chargeback where the merchant has provided sufficient evidence to challenge the chargeback that results in the funds being returned to the merchant.
+ INQUIRY | 
+ CHARGEBACK | 
+ REPRESENTMENT |  
 
 **Dispute Statuses**
 
 ***Status*** | ***Description***
 -------------- | -------------- 
- OPEN | When a Dispute has been raised and merchant action is required.
- PENDING | When a Dispute is awaiting an update from the processor.
- CLOSED | The dispute has been finalised with a result indicating whether the merchant has been successful in challenging the 
+ OPEN | 
+ PENDING | 
+ CLOSED | 
 
 
 **Dispute  Requests**
 
-### *notify*
-Global Payments will notify you of new disputes or changes to existing disputes with a status of PENDING.
+### notify
+### challenge
+### read
+### accept
+### update
 
-### *challenge*
-Organisation initiated request to provide evidence of a transaction related to a dispute.
 
-### *read*
-Organisation initiated request to return information related to a Dispute.
 
-### *accept*
-Organisation initiated request to accept a chargeback. An organisation understands that money has left their account related to the associated transaction and that the dispute cannot be challenged further by the organisation.
+## RESOURCE1
+
+Resource Description here
+
+
+**RESOURCE1 Types**
+
+***Type*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1 Statuses**
+
+***Status*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1  Requests**
+
+### action1
+### action2
+### action3
 
 
 
@@ -246,9 +280,9 @@ Resource Description here
 
 **RESOURCE1  Requests**
 
-### *action1*
-### *action2*
-### *action3*
+### action1
+### action2
+### action3
 
 
 
@@ -278,41 +312,27 @@ Resource Description here
 
 **RESOURCE1  Requests**
 
-### *action1*
-### *action2*
-### *action3*
+### action1
+### action2
+### action3
 
 
 
 
-## RESOURCE1
-
-Resource Description here
 
 
-**RESOURCE1 Types**
-
-***Type*** | ***Description***
--------------- | -------------- 
- | 
- | 
- | 
 
 
-**RESOURCE1 Statuses**
-
-***Status*** | ***Description***
--------------- | -------------- 
- | 
- | 
- | 
 
 
-**RESOURCE1  Requests**
 
-### *action1*
-### *action2*
-### *action3*
+
+
+
+
+
+
+
 
 
 # Version
