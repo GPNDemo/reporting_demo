@@ -112,14 +112,14 @@ An act to attempt the transfer of funds between the Customer and the Merchant.
 
 ***Status*** | ***Description***
 -------------- | -------------- 
- PREAUTHORISED | This indicates that the transaction was authorised successfully but has yet to be captured. Once Captured it will have a status of OPEN BATCH
- OPEN_BATCH | This indicates that the transaction was authorised successfully and automatically captured and is in an Open Batch ready to start the funding process once the Batch is closed.
- VOIDED | This indicates that the transaction was voided before it was Batched. Once Batched it cannot be cancelled
- BATCHED | This Status means that the transaction is now part of a closed Batch and it can no longer be Cancelled. If it has a Status of Batched it has started the process of being part of a Deposit in a  Merchants Bank account.
- DEPOSITED | This Status means that the transaction is now part of a Deposit that was sent to the Organisations bank account. The merchant now know they got money for this transaction.
- DISPUTED | This Status means that the transaction is being disputed by the Customer and the merchant may lose funds relating to this transaction if the Customer successfully contests the transaction.
- DECLINED | This indicates that the transaction did not processed successfully. The transaction was declined by the bank. 
- ERROR | Error represents a mistake in the request to execute a Transaction e.g. missing a mandatory field. 
+ PREAUTHORISED | 
+ OPEN_BATCH | 
+ VOIDED | 
+ BATCHED |
+ DEPOSITED |
+ DISPUTED |
+ DECLINED | 
+ ERROR |  
 
 **Transaction Requests**
 
@@ -149,13 +149,13 @@ If a Transaction has a current status of HELD then a release request will re-ass
 ### *force*
 This is a request initiated by an Organisation that puts a transaction directly into an Open-Batch status and does not request an Authorisation/PreAuthorisation via the processor as the authcode has been attained elsewhere.
 
-### *close-batch*
+### close-batch
 Where does this sit? Do we need a Batch Resource
 
-### *read*
+### read
 Used to retrieve information about an existing Transaction or group of Transactions.
 
-### *update*
+### update
 Used to update information about an existing Transaction. *Can this incorporate adjust, cancel, hold, release?*
 
 
@@ -169,8 +169,11 @@ The initiation of a Debit or a Credit to a Merchant's Bank Account that relates 
 
 ***Type*** | ***Description***
 -------------- | -------------- 
- SPLIT | The Deposit was paid partly to the Organisation and partly to a third party, based on a pre-agreed arrangement between the Organisation and the third party.
+ SPLIT | THe Deposi
   
+  
+
+
 **Deposit Statuses**
 
 ***Status*** | ***Description***
@@ -179,10 +182,7 @@ The initiation of a Debit or a Credit to a Merchant's Bank Account that relates 
  RESERVED | The Deposit is been held in a Global Payments account where it will be reviewed before it is released to an Organisation's account.
  DEPOSITED | The Deposit has been initiated to an Organisation's bank account.
  
-### *read*
-Used to retrieve information about an existing Deposit or group of Deposits.
- 
- 
+
 ## Dispute
 
 An act, initiated by the Customer or their bank, to get more information about that transaction or to challenge a transaction with a view to reverse the transfer of funds between that Customer and the Merchant.
@@ -290,12 +290,12 @@ Used to update information about an existing Payment Method.
 
 
 
-## Order
+## ORDER
 
 An Order is representation of an amount owed by a Customer to a Merchant. It has an amount and currency. An Order may be associated with multiple Transactions.
 
 
-**Order Types**
+**ORDER Types**
 
 ***Type*** | ***Description***
 -------------- | -------------- 
@@ -304,7 +304,7 @@ An Order is representation of an amount owed by a Customer to a Merchant. It has
  
 
 
-**Order Statuses**
+**ORDER Statuses**
 
 ***Status*** | ***Description***
 -------------- | -------------- 
@@ -313,7 +313,7 @@ An Order is representation of an amount owed by a Customer to a Merchant. It has
  CLOSED | The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.
 
 
-**Order  Requests**
+**ORDER  Requests**
 
 ### *create*
 Used to create a new Order on the Global Payments' system
@@ -325,12 +325,12 @@ Used to retrieve information about an existing Order.
 Used to update information about an existing Order.
 
 
-## Payment Schedule
+## PAYMENT SCHEDULE
 
 A schedule of Transactions or Orders that need to be fulfilled.
 
 
-**Payment Schedule Types**
+**PAYMENT SCHEDULE Types**
 
 ***Type*** | ***Description***
 -------------- | -------------- 
@@ -339,7 +339,7 @@ A schedule of Transactions or Orders that need to be fulfilled.
  
 
 
-**Payment Schedule Statuses**
+**PAYMENT SCHEDULE Statuses**
 
 ***Status*** | ***Description***
 -------------- | -------------- 
@@ -348,13 +348,16 @@ A schedule of Transactions or Orders that need to be fulfilled.
  CLOSED | The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.
 
 
-**Payment Schedule Requests**
+**PAYMENT SCHEDULE  Requests**
 
-### *create* Used to create a new Order on the Global Payments' system
+### *create*
+Used to create a new Order on the Global Payments' system
 
-### *read* Used to retrieve information about an existing Order.
+### *read*
+Used to retrieve information about an existing Order.
 
-### *update* Used to update information about an existing Order.
+### *update*
+Used to update information about an existing Order.
 
 
 # Version
