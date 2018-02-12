@@ -29,7 +29,7 @@ Resources can have a **Status**, a **Type**, **Data** and **Relationships** to o
 
 Each instance of a Resource has a unique **Global Payments ID**. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## Organisation
 
@@ -65,7 +65,7 @@ Used to retrieve information about an existing Organisation.
 ### update
 Used to update information about an existing Organisation.
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## Account
 
@@ -95,7 +95,7 @@ Used to retrieve information about an existing Account.
 ### update
 Used to update information about an existing Account.
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## Transaction
 An act to attempt the transfer of funds between the Customer and the Merchant. 
@@ -159,7 +159,7 @@ Used to retrieve information about an existing Transaction.
 Used to update information about an existing Transaction. Can this incorporate adjust, cancel, hold, release?
 
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## Deposit
 
@@ -190,7 +190,7 @@ The initiation of a Debit or a Credit to a Merchant's Bank Account that relates 
 ### action2
 ### action3
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## Dispute
 
@@ -221,7 +221,7 @@ An act, initiated by the Customer or their bank, to challenge a previous transac
 ### accept
 ### update
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## RESOURCE1
 
@@ -253,7 +253,7 @@ Resource Description here
 ### action3
 
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## RESOURCE1
 
@@ -285,7 +285,7 @@ Resource Description here
 ### action3
 
 
-----------------------------------------------------------------------------------------------------------------
+
 
 ## RESOURCE1
 
@@ -317,7 +317,7 @@ Resource Description here
 ### action3
 
 
-----------------------------------------------------------------------------------------------------------------
+
 
 
 
