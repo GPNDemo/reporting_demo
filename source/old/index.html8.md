@@ -334,8 +334,8 @@ A schedule of Transactions or Orders that need to be fulfilled.
 
 ***Type*** | ***Description***
 -------------- | -------------- 
- SUBSCRIPTION | Paying a regular amount at specific intervals.
- INSTALLMENT | Paying an amount at regular intervals to pay back a total amount.
+ STANDALONE | 
+ RECURRING | 
  
 
 
@@ -350,14 +350,11 @@ A schedule of Transactions or Orders that need to be fulfilled.
 
 **Payment Schedule Requests**
 
-### *create* 
-Used to create a new Order on the Global Payments' system
+### *create* Used to create a new Order on the Global Payments' system
 
-### *read* 
-Used to retrieve information about an existing Order.
+### *read* Used to retrieve information about an existing Order.
 
-### *update* 
-Used to update information about an existing Order.
+### *update* Used to update information about an existing Order.
 
 
 # Version
@@ -371,9 +368,8 @@ api = gp_rep::APIClient.authorize!('success')
 api.r_eng.get
 ```
 
-
-
-```pythonimport gp_rep
+```python
+import gp_rep
 
 api = gp_rep.authorize('success')
 api.r_eng.get()
@@ -533,3 +529,4 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the key to delete
 
+---
