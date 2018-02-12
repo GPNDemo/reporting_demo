@@ -21,7 +21,6 @@ search: true
 ---
 
 # Resources
-
 Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.
 
 Resources have a Status, Type, Data and Relationships to other entities. 
@@ -127,18 +126,16 @@ A Refund is a transaction between a Customer and a Merchant in which the transfe
 
 ## Deposit
 
-The initation of a Debit or a Credit to a Merchant's Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.
+The initiation of a Debit or a Credit to a Merchant's Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.
 
 ## Dispute
 
-An act, initiated by the Customer to challenge and reverse the transfer of funds between that Customer and the Merchant
-
+An act, initiated by the Customer or their bank, to challenge a previous transaction with a view to getting more information or reversing the transfer of funds between that Customer and the Merchant for that transaction.
 
 ### notify
 ### challenge
 ### read
-### edit
-### resolve 
+### accept
 
 
 # Version
