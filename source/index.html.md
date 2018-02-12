@@ -29,102 +29,310 @@ Resources can have a **Status**, a **Type**, **Data** and **Relationships** to o
 
 Each instance of a Resource has a unique **Global Payments ID**. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.
 
+----------------------------------------------------------------------------------------------------------------
+
 ## Organisation
 
 Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.
 
-A **Merchant** Organisation which has a contractual relationship with Global Payments for the provision of financial payment services, and/or technical payment services.  
+**Organisation Types**
 
-A **Marketplace** Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments' services.
-Merchants contract with Marketplaces 
-
-An **ISO** Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments' services.
-Merchants contract with ISOs.
-
+***Type*** | ***Description***
+-------------- | -------------- 
+MERCHANT | An Organisation which has a contractual relationship with Global Payments for the provision of financial payment services, and/or technical payment services. 
+MARKETPLACE | An Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments' services. Merchants contract with Marketplaces.
+ISO | Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments' services. Merchants contract with ISOs.
+ 
 **Organisation Statuses**
 
-***Status*** | *Description*| 
+***Status*** | ***Description***
 -------------- | -------------- 
-CREATED | This indicates that an Organisation or an Account has been created. 
-ACTIVE LIVE | This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.
-ACTIVE TEST | This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,
- DISABLED | This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account
-ERROR | Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit & risk or information missing resulting in an incomplete application.
- 
+CREATED | This indicates that an Organisation has been created. The Organisation cannot be used to process real payments until it is updated to a status of ACTIVE-LIVE. 
+ACTIVE LIVE | This indicates that an Organisation  is in live mode can can be used to process real transactions.
+ACTIVE TEST | This indicates that an Organisation is it test mode and that any activity against the Organisation  will be considered testing and real funds will never be processed.
+DISABLED | This indicates that the Organisation  can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. 
+ERROR | Indicating that an Organisation  was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.
+
+**Organisation Requests** 
+These are the actions that can be taken to a Global Payments Organisation.
+
 ### create
-Used to create a new Organisation or Account on Global Payments' system.
+Used to create a new Organisation on Global Payments' system.
 
 ### read
-Used to retrieve information about an existing Organisation or Account.
+Used to retrieve information about an existing Organisation.
 
 ### update
-Used to update information about an existing Organisation or Account.
+Used to update information about an existing Organisation.
+
+----------------------------------------------------------------------------------------------------------------
 
 ## Account
 
 A representation of a data needed to configure an Organisation to process payments. Typically this would information such as Organisation Deposit Bank Accounts, Allowed Functionality for that Account, Payment Method Specific details e.g. For Cards it would be the MID and TID.
 
+**Account Types**
 
-Status | Description| 
+**Account Statuses**
+
+***Status*** | ***Description***
 -------------- | -------------- 
-CREATED | This indicates that an Organisation or an Account has been created. 
-ACTIVE LIVE | This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.
-ACTIVE TEST | This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,
- DISABLED | This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account
-ERROR | Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit & risk or information missing resulting in an incomplete application.
+CREATED | This indicates that an Account has been created. It cannot be used to process real payments until it is updated to a status of ACTIVE-LIVE. 
+ACTIVE LIVE | This indicates that an Account is in live mode can can be used to process real transactions.
+ACTIVE TEST | This indicates that an Account is it test mode and that any activity against the Account will be considered testing and real funds will never be processed.
+DISABLED | This indicates that the Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. 
+ERROR | Indicating that an Account was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an account for an Organisation.
 
-
-Status | Description| 
--------------- | -------------- 
-CREATED | This indicates that an Organisation or an Account has been created. 
-ACTIVE LIVE | This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.
-ACTIVE TEST | This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,
-DISABLED | This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account
-ERROR | Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit & risk or information missing resulting in an incomplete application.
-
+**Account Requests**
+These are the actions that can be taken to Global Payments Organisations' Accounts.
 
 ### create
-Used to create a new Organisation or Account on Global Payments' system
+Used to create a new Account on Global Payments' system
 
 ### read
-Used to retrieve information about an existing Organisation or Account.
+Used to retrieve information about an existing Account.
 
 ### update
-Used to update information about an existing Organisation or Account.
+Used to update information about an existing Account.
 
+----------------------------------------------------------------------------------------------------------------
 
 ## Transaction
+An act to attempt the transfer of funds between the Customer and the Merchant. 
 
-An act to attempt the transfer of funds between the Customer and the Merchant
+**Transaction Types**
 
-A Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the former to the latter
+***Type*** | ***Description***
+-------------- | -------------- 
+ PAYMENT | Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the Customer to the Merchant
+ REFUND | A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the Merchant to the Customer. There can be different types of Refund Transactions; for example ones that are linked to a previous Payment transaction and ones that are standalone. 
+ 
 
-A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the latter to the former
+**Transaction Statuses**
+
+***Status*** | ***Description***
+-------------- | -------------- 
+ PREAUTHORISED | 
+ OPEN_BATCH | 
+ VOIDED | 
+ BATCHED |
+ DEPOSITED |
+ DISPUTED |
+ DECLINED | 
+ ERROR |  
+
+**Transaction Requests**
 
 ### authorise
-### preauthorise
+Organisation initiated request to Authorise a transaction. If authorised successfully and flagged for auto-capture then the transaction would be have an OPEN-BATCH Status.  If successfully authorised and not flagged for auto-capture then the transaction would be have a PREAUTHORISED Status. A separate capture request is needed to move the transactions from a PREAUTHORISED status to an OPEN-BATCH status.
+
 ### cancel
+Organisation initiated request to void a transaction. This can be applied to successful authorised/preauthorised transactions and stops the transaction from going further in its' lifecycle.
+This request must be executed before the Transaction has a status of BATCHED
+
 ### refund
+Organisation initiated request to Refund a Customer money. This can be linked to an previous Payment transaction or a standalone where it does not link to a previous Payment Transaction.
+
 ### adjust
-### batch
+Organisation initiated request to change the amount of a transaction that has a status of PREAUTHORISED or OPEN-BATCH. e.g. to add a tip.
+This request must be executed before the Transaction has a status of BATCHED
+
+### capture
+Organisation initiated request to start the process of moving funds between the Customer and the Organisation. It changes a transaction with a status of PREAUTHORISED to have a status of OPEN-BATCH. 
+
 ### hold
+This is an organisation initiated request which If a transaction has an Open Batch status then putting it on hold removes it from the Open Batch but does not void the transaction. This could be used to pause a transaction for being processed in a Batch to check inventory or do fraud analysis
+
 ### release
+If a Transaction has a current status of HELD then a release request will re-assign it a status of Open-Batch
+
 ### force
+This is a request initiated by an Organisation that puts a transaction directly into an Open-Batch status and does not request an Authorisation/PreAuthorisation via the processor as the authcode has been attained elsewhere.
+
+### close-batch
+Where does this sit?
+
 ### read
-### edit
+Used to retrieve information about an existing Transaction.
+
+### update
+Used to update information about an existing Transaction. Can this incorporate adjust, cancel, hold, release?
+
+
+----------------------------------------------------------------------------------------------------------------
 
 ## Deposit
 
-The initiation of a Debit or a Credit to a Merchant's Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.
+The initiation of a Debit or a Credit to a Merchant's Bank Account that relates to Transactions and Disputes processed via Global Payments or fees charged by Global Payments to the Organisation. 
+
+**Deposit Types**
+
+***Type*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**Deposit Statuses**
+
+***Status*** | ***Description***
+-------------- | -------------- 
+ DELAYED | 
+ RESERVED | 
+ DEPOSITED | 
+ 
+
+
+**Deposit  Requests**
+
+### action1
+### action2
+### action3
+
+----------------------------------------------------------------------------------------------------------------
 
 ## Dispute
 
-An act, initiated by the Customer or their bank, to challenge a previous transaction with a view to getting more information or reversing the transfer of funds between that Customer and the Merchant for that transaction.
+An act, initiated by the Customer or their bank, to challenge a previous transaction with a view to getting more information about that transaction or reversing the transfer of funds between that Customer and the Merchant for that transaction.
+
+**Dispute Types**
+
+***Type*** | ***Description***
+-------------- | -------------- 
+ INQUIRY | 
+ CHARGEBACK | 
+ REPRESENTMENT |  
+
+**Dispute Statuses**
+
+***Status*** | ***Description***
+-------------- | -------------- 
+ OPEN | 
+ PENDING | 
+ CLOSED | 
+
+
+**Dispute  Requests**
 
 ### notify
 ### challenge
 ### read
 ### accept
+### update
+
+----------------------------------------------------------------------------------------------------------------
+
+## RESOURCE1
+
+Resource Description here
+
+
+**RESOURCE1 Types**
+
+***Type*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1 Statuses**
+
+***Status*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1  Requests**
+
+### action1
+### action2
+### action3
+
+
+----------------------------------------------------------------------------------------------------------------
+
+## RESOURCE1
+
+Resource Description here
+
+
+**RESOURCE1 Types**
+
+***Type*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1 Statuses**
+
+***Status*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1  Requests**
+
+### action1
+### action2
+### action3
+
+
+----------------------------------------------------------------------------------------------------------------
+
+## RESOURCE1
+
+Resource Description here
+
+
+**RESOURCE1 Types**
+
+***Type*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1 Statuses**
+
+***Status*** | ***Description***
+-------------- | -------------- 
+ | 
+ | 
+ | 
+
+
+**RESOURCE1  Requests**
+
+### action1
+### action2
+### action3
+
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Version

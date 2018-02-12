@@ -280,9 +280,6 @@
                               <a href="#authorise" class="toc-h3 toc-link" data-title="Resources">authorise</a>
                             </li>
                             <li>
-                              <a href="#preauthorise" class="toc-h3 toc-link" data-title="Resources">preauthorise</a>
-                            </li>
-                            <li>
                               <a href="#cancel" class="toc-h3 toc-link" data-title="Resources">cancel</a>
                             </li>
                             <li>
@@ -292,7 +289,7 @@
                               <a href="#adjust" class="toc-h3 toc-link" data-title="Resources">adjust</a>
                             </li>
                             <li>
-                              <a href="#batch" class="toc-h3 toc-link" data-title="Resources">batch</a>
+                              <a href="#capture" class="toc-h3 toc-link" data-title="Resources">capture</a>
                             </li>
                             <li>
                               <a href="#hold" class="toc-h3 toc-link" data-title="Resources">hold</a>
@@ -304,16 +301,31 @@
                               <a href="#force" class="toc-h3 toc-link" data-title="Resources">force</a>
                             </li>
                             <li>
+                              <a href="#close-batch" class="toc-h3 toc-link" data-title="Resources">close-batch</a>
+                            </li>
+                            <li>
                               <a href="#read-3" class="toc-h3 toc-link" data-title="Resources">read</a>
                             </li>
                             <li>
-                              <a href="#edit" class="toc-h3 toc-link" data-title="Resources">edit</a>
+                              <a href="#update-3" class="toc-h3 toc-link" data-title="Resources">update</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                       <a href="#deposit" class="toc-h2 toc-link" data-title="deposit">Deposit</a>
-                                          </li>
+                      <!-- adding third level, check js and css -->
+                        <ul class="toc-list-h3">
+                            <li>
+                              <a href="#action1" class="toc-h3 toc-link" data-title="Resources">action1</a>
+                            </li>
+                            <li>
+                              <a href="#action2" class="toc-h3 toc-link" data-title="Resources">action2</a>
+                            </li>
+                            <li>
+                              <a href="#action3" class="toc-h3 toc-link" data-title="Resources">action3</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                       <a href="#dispute" class="toc-h2 toc-link" data-title="dispute">Dispute</a>
                       <!-- adding third level, check js and css -->
@@ -329,6 +341,54 @@
                             </li>
                             <li>
                               <a href="#accept" class="toc-h3 toc-link" data-title="Resources">accept</a>
+                            </li>
+                            <li>
+                              <a href="#update-4" class="toc-h3 toc-link" data-title="Resources">update</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                      <a href="#resource1" class="toc-h2 toc-link" data-title="resource1">RESOURCE1</a>
+                      <!-- adding third level, check js and css -->
+                        <ul class="toc-list-h3">
+                            <li>
+                              <a href="#action1-2" class="toc-h3 toc-link" data-title="Resources">action1</a>
+                            </li>
+                            <li>
+                              <a href="#action2-2" class="toc-h3 toc-link" data-title="Resources">action2</a>
+                            </li>
+                            <li>
+                              <a href="#action3-2" class="toc-h3 toc-link" data-title="Resources">action3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                      <a href="#resource1-2" class="toc-h2 toc-link" data-title="resource1">RESOURCE1</a>
+                      <!-- adding third level, check js and css -->
+                        <ul class="toc-list-h3">
+                            <li>
+                              <a href="#action1-3" class="toc-h3 toc-link" data-title="Resources">action1</a>
+                            </li>
+                            <li>
+                              <a href="#action2-3" class="toc-h3 toc-link" data-title="Resources">action2</a>
+                            </li>
+                            <li>
+                              <a href="#action3-3" class="toc-h3 toc-link" data-title="Resources">action3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                      <a href="#resource1-3" class="toc-h2 toc-link" data-title="resource1">RESOURCE1</a>
+                      <!-- adding third level, check js and css -->
+                        <ul class="toc-list-h3">
+                            <li>
+                              <a href="#action1-4" class="toc-h3 toc-link" data-title="Resources">action1</a>
+                            </li>
+                            <li>
+                              <a href="#action2-4" class="toc-h3 toc-link" data-title="Resources">action2</a>
+                            </li>
+                            <li>
+                              <a href="#action3-4" class="toc-h3 toc-link" data-title="Resources">action3</a>
                             </li>
                         </ul>
                     </li>
@@ -395,127 +455,459 @@
 <p><strong>Requests</strong> are actions that are taken to affect Resources.</p>
 
 <p>Each instance of a Resource has a unique <strong>Global Payments ID</strong>. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.</p>
+
+<hr>
 <h2 id='organisation'>Organisation</h2>
 <p>Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.</p>
 
-<p>A <strong>Merchant</strong> Organisation which has a contractual relationship with Global Payments for the provision of financial payment services, and/or technical payment services.  </p>
+<p><strong>Organisation Types</strong></p>
 
-<p>A <strong>Marketplace</strong> Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments&#39; services.
-Merchants contract with Marketplaces </p>
-
-<p>An <strong>ISO</strong> Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments&#39; services.
-Merchants contract with ISOs.</p>
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MERCHANT</td>
+<td>An Organisation which has a contractual relationship with Global Payments for the provision of financial payment services, and/or technical payment services.</td>
+</tr>
+<tr>
+<td>MARKETPLACE</td>
+<td>An Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments&#39; services. Merchants contract with Marketplaces.</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments&#39; services. Merchants contract with ISOs.</td>
+</tr>
+</tbody></table>
 
 <p><strong>Organisation Statuses</strong></p>
 
 <table><thead>
 <tr>
 <th><strong><em>Status</em></strong></th>
-<th><em>Description</em></th>
+<th><strong><em>Description</em></strong></th>
 </tr>
 </thead><tbody>
 <tr>
 <td>CREATED</td>
-<td>This indicates that an Organisation or an Account has been created.</td>
+<td>This indicates that an Organisation has been created. The Organisation cannot be used to process real payments until it is updated to a status of ACTIVE-LIVE.</td>
 </tr>
 <tr>
 <td>ACTIVE LIVE</td>
-<td>This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.</td>
+<td>This indicates that an Organisation  is in live mode can can be used to process real transactions.</td>
 </tr>
 <tr>
 <td>ACTIVE TEST</td>
-<td>This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,</td>
+<td>This indicates that an Organisation is it test mode and that any activity against the Organisation  will be considered testing and real funds will never be processed.</td>
 </tr>
 <tr>
 <td>DISABLED</td>
-<td>This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account</td>
+<td>This indicates that the Organisation  can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity.</td>
 </tr>
 <tr>
 <td>ERROR</td>
-<td>Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit &amp; risk or information missing resulting in an incomplete application.</td>
+<td>Indicating that an Organisation  was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.</td>
 </tr>
 </tbody></table>
+
+<p><strong>Organisation Requests</strong> 
+These are the actions that can be taken to a Global Payments Organisation.</p>
 <h3 id='create'>create</h3>
-<p>Used to create a new Organisation or Account on Global Payments&#39; system.</p>
+<p>Used to create a new Organisation on Global Payments&#39; system.</p>
 <h3 id='read'>read</h3>
-<p>Used to retrieve information about an existing Organisation or Account.</p>
+<p>Used to retrieve information about an existing Organisation.</p>
 <h3 id='update'>update</h3>
-<p>Used to update information about an existing Organisation or Account.</p>
+<p>Used to update information about an existing Organisation.</p>
+
+<hr>
 <h2 id='account'>Account</h2>
 <p>A representation of a data needed to configure an Organisation to process payments. Typically this would information such as Organisation Deposit Bank Accounts, Allowed Functionality for that Account, Payment Method Specific details e.g. For Cards it would be the MID and TID.</p>
 
-<table><thead>
-<tr>
-<th>Status</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>CREATED</td>
-<td>This indicates that an Organisation or an Account has been created.</td>
-</tr>
-<tr>
-<td>ACTIVE LIVE</td>
-<td>This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.</td>
-</tr>
-<tr>
-<td>ACTIVE TEST</td>
-<td>This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,</td>
-</tr>
-<tr>
-<td>DISABLED</td>
-<td>This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account</td>
-</tr>
-<tr>
-<td>ERROR</td>
-<td>Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit &amp; risk or information missing resulting in an incomplete application.</td>
-</tr>
-</tbody></table>
+<p><strong>Account Types</strong></p>
+
+<p><strong>Account Statuses</strong></p>
 
 <table><thead>
 <tr>
-<th>Status</th>
-<th>Description</th>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
 </tr>
 </thead><tbody>
 <tr>
 <td>CREATED</td>
-<td>This indicates that an Organisation or an Account has been created.</td>
+<td>This indicates that an Account has been created. It cannot be used to process real payments until it is updated to a status of ACTIVE-LIVE.</td>
 </tr>
 <tr>
 <td>ACTIVE LIVE</td>
-<td>This indicates that an Organisation or an Account is in live mode can can be used to process real transactions.</td>
+<td>This indicates that an Account is in live mode can can be used to process real transactions.</td>
 </tr>
 <tr>
 <td>ACTIVE TEST</td>
-<td>This indicates that an Organisation or an Account is it test mode and that any activity against the Organisatin or Account will never result in real payment processing,</td>
+<td>This indicates that an Account is it test mode and that any activity against the Account will be considered testing and real funds will never be processed.</td>
 </tr>
 <tr>
 <td>DISABLED</td>
-<td>This indicates that the Organisation or an Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. A reason would be associated with the disabling of an Organisation or an Account</td>
+<td>This indicates that the Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity.</td>
 </tr>
 <tr>
 <td>ERROR</td>
-<td>Indicating that an Organisation or Account was not successfully created or updated. This could be incomplete application or concerns due to credit &amp; risk or information missing resulting in an incomplete application.</td>
+<td>Indicating that an Account was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an account for an Organisation.</td>
 </tr>
 </tbody></table>
+
+<p><strong>Account Requests</strong>
+These are the actions that can be taken to Global Payments Organisations&#39; Accounts.</p>
 <h3 id='create-2'>create</h3>
-<p>Used to create a new Organisation or Account on Global Payments&#39; system</p>
+<p>Used to create a new Account on Global Payments&#39; system</p>
 <h3 id='read-2'>read</h3>
-<p>Used to retrieve information about an existing Organisation or Account.</p>
+<p>Used to retrieve information about an existing Account.</p>
 <h3 id='update-2'>update</h3>
-<p>Used to update information about an existing Organisation or Account.</p>
+<p>Used to update information about an existing Account.</p>
+
+<hr>
 <h2 id='transaction'>Transaction</h2>
-<p>An act to attempt the transfer of funds between the Customer and the Merchant</p>
+<p>An act to attempt the transfer of funds between the Customer and the Merchant. </p>
 
-<p>A Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the former to the latter</p>
+<p><strong>Transaction Types</strong></p>
 
-<p>A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the latter to the former</p>
-<h3 id='authorise'>authorise</h3><h3 id='preauthorise'>preauthorise</h3><h3 id='cancel'>cancel</h3><h3 id='refund'>refund</h3><h3 id='adjust'>adjust</h3><h3 id='batch'>batch</h3><h3 id='hold'>hold</h3><h3 id='release'>release</h3><h3 id='force'>force</h3><h3 id='read-3'>read</h3><h3 id='edit'>edit</h3><h2 id='deposit'>Deposit</h2>
-<p>The initiation of a Debit or a Credit to a Merchant&#39;s Bank Account relating to the Sale and Refund Transactions processed via the Techncial and Financial services provided by the Payment Processor.</p>
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PAYMENT</td>
+<td>Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the Customer to the Merchant</td>
+</tr>
+<tr>
+<td>REFUND</td>
+<td>A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the Merchant to the Customer. There can be different types of Refund Transactions; for example ones that are linked to a previous Payment transaction and ones that are standalone.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Transaction Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PREAUTHORISED</td>
+<td></td>
+</tr>
+<tr>
+<td>OPEN_BATCH</td>
+<td></td>
+</tr>
+<tr>
+<td>VOIDED</td>
+<td></td>
+</tr>
+<tr>
+<td>BATCHED</td>
+<td></td>
+</tr>
+<tr>
+<td>DEPOSITED</td>
+<td></td>
+</tr>
+<tr>
+<td>DISPUTED</td>
+<td></td>
+</tr>
+<tr>
+<td>DECLINED</td>
+<td></td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Transaction Requests</strong></p>
+<h3 id='authorise'>authorise</h3>
+<p>Organisation initiated request to Authorise a transaction. If authorised successfully and flagged for auto-capture then the transaction would be have an OPEN-BATCH Status.  If successfully authorised and not flagged for auto-capture then the transaction would be have a PREAUTHORISED Status. A separate capture request is needed to move the transactions from a PREAUTHORISED status to an OPEN-BATCH status.</p>
+<h3 id='cancel'>cancel</h3>
+<p>Organisation initiated request to void a transaction. This can be applied to successful authorised/preauthorised transactions and stops the transaction from going further in its&#39; lifecycle.
+This request must be executed before the Transaction has a status of BATCHED</p>
+<h3 id='refund'>refund</h3>
+<p>Organisation initiated request to Refund a Customer money. This can be linked to an previous Payment transaction or a standalone where it does not link to a previous Payment Transaction.</p>
+<h3 id='adjust'>adjust</h3>
+<p>Organisation initiated request to change the amount of a transaction that has a status of PREAUTHORISED or OPEN-BATCH. e.g. to add a tip.
+This request must be executed before the Transaction has a status of BATCHED</p>
+<h3 id='capture'>capture</h3>
+<p>Organisation initiated request to start the process of moving funds between the Customer and the Organisation. It changes a transaction with a status of PREAUTHORISED to have a status of OPEN-BATCH. </p>
+<h3 id='hold'>hold</h3>
+<p>This is an organisation initiated request which If a transaction has an Open Batch status then putting it on hold removes it from the Open Batch but does not void the transaction. This could be used to pause a transaction for being processed in a Batch to check inventory or do fraud analysis</p>
+<h3 id='release'>release</h3>
+<p>If a Transaction has a current status of HELD then a release request will re-assign it a status of Open-Batch</p>
+<h3 id='force'>force</h3>
+<p>This is a request initiated by an Organisation that puts a transaction directly into an Open-Batch status and does not request an Authorisation/PreAuthorisation via the processor as the authcode has been attained elsewhere.</p>
+<h3 id='close-batch'>close-batch</h3>
+<p>Where does this sit?</p>
+<h3 id='read-3'>read</h3>
+<p>Used to retrieve information about an existing Transaction.</p>
+<h3 id='update-3'>update</h3>
+<p>Used to update information about an existing Transaction. Can this incorporate adjust, cancel, hold, release?</p>
+
+<hr>
+<h2 id='deposit'>Deposit</h2>
+<p>The initiation of a Debit or a Credit to a Merchant&#39;s Bank Account that relates to Transactions and Disputes processed via Global Payments or fees charged by Global Payments to the Organisation. </p>
+
+<p><strong>Deposit Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Deposit Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>DELAYED</td>
+<td></td>
+</tr>
+<tr>
+<td>RESERVED</td>
+<td></td>
+</tr>
+<tr>
+<td>DEPOSITED</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Deposit  Requests</strong></p>
+<h3 id='action1'>action1</h3><h3 id='action2'>action2</h3><h3 id='action3'>action3</h3>
+<hr>
 <h2 id='dispute'>Dispute</h2>
-<p>An act, initiated by the Customer or their bank, to challenge a previous transaction with a view to getting more information or reversing the transfer of funds between that Customer and the Merchant for that transaction.</p>
-<h3 id='notify'>notify</h3><h3 id='challenge'>challenge</h3><h3 id='read-4'>read</h3><h3 id='accept'>accept</h3><h1 id='version'>Version</h1><h2 id='get-all-report-obs'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
+<p>An act, initiated by the Customer or their bank, to challenge a previous transaction with a view to getting more information about that transaction or reversing the transfer of funds between that Customer and the Merchant for that transaction.</p>
+
+<p><strong>Dispute Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>INQUIRY</td>
+<td></td>
+</tr>
+<tr>
+<td>CHARGEBACK</td>
+<td></td>
+</tr>
+<tr>
+<td>REPRESENTMENT</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Dispute Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OPEN</td>
+<td></td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td></td>
+</tr>
+<tr>
+<td>CLOSED</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Dispute  Requests</strong></p>
+<h3 id='notify'>notify</h3><h3 id='challenge'>challenge</h3><h3 id='read-4'>read</h3><h3 id='accept'>accept</h3><h3 id='update-4'>update</h3>
+<hr>
+<h2 id='resource1'>RESOURCE1</h2>
+<p>Resource Description here</p>
+
+<p><strong>RESOURCE1 Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>RESOURCE1 Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>RESOURCE1  Requests</strong></p>
+<h3 id='action1-2'>action1</h3><h3 id='action2-2'>action2</h3><h3 id='action3-2'>action3</h3>
+<hr>
+<h2 id='resource1-2'>RESOURCE1</h2>
+<p>Resource Description here</p>
+
+<p><strong>RESOURCE1 Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>RESOURCE1 Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>RESOURCE1  Requests</strong></p>
+<h3 id='action1-3'>action1</h3><h3 id='action2-3'>action2</h3><h3 id='action3-3'>action3</h3>
+<hr>
+<h2 id='resource1-3'>RESOURCE1</h2>
+<p>Resource Description here</p>
+
+<p><strong>RESOURCE1 Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>RESOURCE1 Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>RESOURCE1  Requests</strong></p>
+<h3 id='action1-4'>action1</h3><h3 id='action2-4'>action2</h3><h3 id='action3-4'>action3</h3>
+<hr>
+<h1 id='version'>Version</h1><h2 id='get-all-report-obs'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">r_eng</span><span class="p">.</span><span class="nf">get</span>
