@@ -20,7 +20,7 @@ includes:
 search: true
 ---
 
-# Resources
+# Resourcessss
 Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.
 
 Resources can have a **Status**, a **Type**, **Data** and **Relationships** to other resources. 
@@ -31,7 +31,7 @@ Each instance of a Resource has a unique **Global Payments ID**. This is a Globa
 
 
 
-## Organistion
+## Organisation
 
 Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.
 
