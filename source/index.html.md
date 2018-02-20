@@ -48,12 +48,14 @@ DISABLED | This indicates that the Organisation  can no longer be used for payme
 ERROR | Indicating that an Organisation  was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.
 ### *Data* 
 This is the data that can be associated with a Global Payments' Organisation.
+
 ```json
 {
   "id": 243234234,
   "deleted" : "adsflkjhaskdljfhskaldjfh"
 }
 ```
+
 **Organisation Requests** 
 These are the actions that can be taken to a Global Payments Organisation.
 ### *create*
