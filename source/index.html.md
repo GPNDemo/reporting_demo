@@ -49,26 +49,18 @@ ERROR | Indicating that an Organisation  was not successfully created or updated
 
 **Organisation Requests** 
 These are the actions that can be taken to a Global Payments Organisation.
-
-
 ```json
 {
   "id": 243234234,
   "deleted" : "adsflkjhaskdljfhskaldjfh"
 }
 ```
-
 ### *create*
 Used to create a new Organisation on Global Payments' system.
-
-
 ### *read*
 Used to retrieve information about an existing Organisation.
-
 ### *update*
 Used to update information about an existing Organisation.
-
-
 
 ## Account
 
