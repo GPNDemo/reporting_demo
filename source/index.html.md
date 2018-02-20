@@ -20,7 +20,7 @@ includes:
 search: true
 ---
 
-# Resourcessss
+# Resources
 Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.
 
 Resources can have a **Status**, a **Type**, **Data** and **Relationships** to other resources. 
