@@ -60,8 +60,8 @@ Used to create a new Organisation on Global Payments' system.
 
 ```json
 {
-  "id": 2,
-  "deleted" : ":("
+  "id": 243234234,
+  "deleted" : "adsflkjhaskdljfhskaldjfh"
 }
 ```
 
