@@ -8,6 +8,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - Ruby
   - REST
   - shell: cURL
+  - python
+  - json
 
 toc_footers:
   - Global Payments Powering Payments Globally
@@ -55,9 +57,22 @@ ERROR | Indicating that an Organisation  was not successfully created or updated
 **Organisation Requests** 
 These are the actions that can be taken to a Global Payments Organisation.
 
-### *create*
-Used to create a new Organisation on Global Payments' system.
+```PHP
+import gp_rep
 
+api = gp_rep.authorize('success')
+api.r_eng.delete(2)
+
+
+
+```ruby
+import gp_rep
+
+api = gp_rep.authorize('success')
+api.r_eng.delete(2)
+```
+
+  
 ```python
 import gp_rep
 
@@ -71,12 +86,29 @@ curl "http://example.com/api/r_eng/2"
   -H "Authorization: success"
 ```
 
+```javascript
+{
+  "id": 243234234,
+  "deleted" : "adsflkjhaskdljfhskaldjfh"
+}
+
+
 ```json
 {
   "id": 243234234,
   "deleted" : "adsflkjhaskdljfhskaldjfh"
 }
 ```
+
+```REST
+{
+  "id": 243REST234234,
+  "deleted" : "adsflkjhaskdljfhskaldjfh"
+}
+```
+
+### *create*
+Used to create a new Organisation on Global Payments' system.
 
 
 ### *read*
