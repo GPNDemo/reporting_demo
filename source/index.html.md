@@ -46,7 +46,7 @@ ACTIVE LIVE | This indicates that an Organisation  is in live mode can can be us
 ACTIVE TEST | This indicates that an Organisation is it test mode and that any activity against the Organisation  will be considered testing and real funds will never be processed.
 DISABLED | This indicates that the Organisation  can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. 
 ERROR | Indicating that an Organisation  was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.
-**Organisation Data** 
+### *Data* 
 This is the data that can be associated with a Global Payments' Organisation.
 ```json
 {
