@@ -203,7 +203,7 @@
   </head>
 
 
-  <body class="index" data-languages="[&quot;PHP&quot;,&quot;Java&quot;,&quot;javascript&quot;,&quot;Ruby&quot;,&quot;REST&quot;,&quot;shell&quot;]">
+  <body class="index" data-languages="[&quot;PHP&quot;,&quot;Java&quot;,&quot;javascript&quot;,&quot;Ruby&quot;,&quot;REST&quot;,&quot;shell&quot;,&quot;python&quot;,&quot;json&quot;]">
 
     <header class="site-header">
       <a href="/" class="site-logo">
@@ -232,6 +232,8 @@
                 <a href="#" data-language-name="Ruby">Ruby</a>
                 <a href="#" data-language-name="REST">REST</a>
                 <a href="#" data-language-name="shell">cURL</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="json">json</a>
           </div>
           <div class="search">
             <input type="text" class="search" id="input-search" placeholder="Search">
@@ -517,20 +519,43 @@
 
 <p><strong>Organisation Requests</strong> 
 These are the actions that can be taken to a Global Payments Organisation.</p>
-<h3 id='create'><em>create</em></h3>
-<p>Used to create a new Organisation on Global Payments&#39; system.</p>
-<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">gp_rep</span>
+<pre class="highlight plaintext"><code>import gp_rep
+
+api = gp_rep.authorize('success')
+api.r_eng.delete(2)
+
+
+
+```ruby
+import gp_rep
+
+api = gp_rep.authorize('success')
+api.r_eng.delete(2)
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">gp_rep</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'success'</span><span class="p">)</span>
 <span class="n">api</span><span class="o">.</span><span class="n">r_eng</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/r_eng/2"</span>
   -X DELETE
   -H <span class="s2">"Authorization: success"</span>
-</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">243234234</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"adsflkjhaskdljfhskaldjfh"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='read'><em>read</em></h3>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="s2">"id"</span><span class="p">:</span> <span class="mi">243234234</span><span class="p">,</span>
+  <span class="s2">"deleted"</span> <span class="p">:</span> <span class="s2">"adsflkjhaskdljfhskaldjfh"</span>
+<span class="p">}</span>
+
+
+<span class="s2">```json
+{
+  "id": 243234234,
+  "deleted" : "adsflkjhaskdljfhskaldjfh"
+}
+</span></code></pre><pre class="highlight plaintext"><code>{
+  "id": 243REST234234,
+  "deleted" : "adsflkjhaskdljfhskaldjfh"
+}
+</code></pre><h3 id='create'><em>create</em></h3>
+<p>Used to create a new Organisation on Global Payments&#39; system.</p>
+<h3 id='read'><em>read</em></h3>
 <p>Used to retrieve information about an existing Organisation.</p>
 <h3 id='update'><em>update</em></h3>
 <p>Used to update information about an existing Organisation.</p>
@@ -1162,6 +1187,8 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
                   <a href="#" data-language-name="Ruby">Ruby</a>
                   <a href="#" data-language-name="REST">REST</a>
                   <a href="#" data-language-name="shell">cURL</a>
+                  <a href="#" data-language-name="python">python</a>
+                  <a href="#" data-language-name="json">json</a>
             </div>
         </div>
       </div>
