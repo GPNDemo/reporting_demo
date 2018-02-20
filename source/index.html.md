@@ -8,10 +8,9 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - Ruby
   - REST
   - shell: cURL
-  - SOAP
 
 toc_footers:
-  - Global Payments Powering Payments
+  - Global Payments Powering Payments Globally
   - <a href='https://www.globalpaymentsinc.com'>www.globalpaymentsinc.com</a>
 
 includes:
@@ -58,6 +57,14 @@ These are the actions that can be taken to a Global Payments Organisation.
 
 ### *create*
 Used to create a new Organisation on Global Payments' system.
+
+```json
+{
+  "id": 2,
+  "deleted" : ":("
+}
+```
+
 
 ### *read*
 Used to retrieve information about an existing Organisation.
