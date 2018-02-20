@@ -58,6 +58,19 @@ These are the actions that can be taken to a Global Payments Organisation.
 ### *create*
 Used to create a new Organisation on Global Payments' system.
 
+```python
+import gp_rep
+
+api = gp_rep.authorize('success')
+api.r_eng.delete(2)
+```
+
+```shell
+curl "http://example.com/api/r_eng/2"
+  -X DELETE
+  -H "Authorization: success"
+```
+
 ```json
 {
   "id": 243234234,
