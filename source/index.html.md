@@ -2,10 +2,10 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - json
+  - GET Response:json
 
 toc_footers:
-  - Global Payments Powering Payments Globally
+  - Powering Payments Globally
   - <a href='https://www.globalpaymentsinc.com'>www.globalpaymentsinc.com</a>
 
 search: true
@@ -42,7 +42,7 @@ CREATED | This indicates that an Organisation has been created. The Organisation
 ACTIVE LIVE | This indicates that an Organisation  is in live mode can can be used to process real transactions.
 ACTIVE TEST | This indicates that an Organisation is it test mode and that any activity against the Organisation  will be considered testing and real funds will never be processed.
 DISABLED | This indicates that the Organisation  can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity. 
-ERROR | Indicating that an Organisation  was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.
+ERROR | Indicating that an Organisation was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.
 
 ### data
  
