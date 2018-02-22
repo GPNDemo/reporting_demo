@@ -28,6 +28,8 @@ Each instance of a Resource has a unique **Global Payments ID**. This is a Globa
   "id": 11sdfsdfsdf,
   "deleted" : adsflkjhaskdljfhskaldjfh
   deleted : "adsflkjhaskdljfhskaldjfh"
+  "d" : 234
+  213234: "sdfsdf234234"
   
 }
 ```
