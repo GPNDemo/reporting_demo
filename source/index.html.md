@@ -25,8 +25,10 @@ Each instance of a Resource has a unique **Global Payments ID**. This is a Globa
 ## Organisation
 ```json
 {
-  "id": 111111111,
-  "deleted" : "adsflkjhaskdljfhskaldjfh"
+  "id": 11sdfsdfsdf,
+  "deleted" : adsflkjhaskdljfhskaldjfh
+  deleted : "adsflkjhaskdljfhskaldjfh"
+  
 }
 ```
 
