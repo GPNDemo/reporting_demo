@@ -237,7 +237,7 @@
               <a href="#resources" class="toc-h1 toc-link" data-title="resources">Resources</a>
                 <ul class="toc-list-h2">
                     <li>
-                      <a href="#organiasdadasdsation" class="toc-h2 toc-link" data-title="organiasdadasdsation">Organiasdadasdsation</a>
+                      <a href="#organisations" class="toc-h2 toc-link" data-title="organisations">Organisations</a>
                       <!-- adding third level, check js and css -->
                         <ul class="toc-list-h3">
                             <li>
@@ -414,7 +414,43 @@
 <p><strong>Requests</strong> are actions that are taken to affect Resources.</p>
 
 <p>Each instance of a Resource has a unique <strong>Global Payments ID</strong>. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.</p>
-<h2 id='organiasdadasdsation'>Organiasdadasdsation</h2>
+<h2 id='organisations'>Organisations</h2><pre class="highlight json tab-json"><code><span class="s2">"organisation_id"</span><span class="p">:</span><span class="w">  </span><span class="s2">"GPN generated unique id that identifies the Organisation this dispute relates to"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"account_id"</span><span class="p">:</span><span class="w">   </span><span class="s2">"GPN generated unique id  that links to the associated Organisation's Account information for this Dsipute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"transaction_id"</span><span class="p">:</span><span class="w">   </span><span class="s2">"GPN Generated unique reference for this transaction this dispute relates to"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"id"</span><span class="p">:</span><span class="w">   </span><span class="s2">"GPN generated unique id that uniquely identifies this Dispute."</span><span class="p">,</span><span class="w">
+</span><span class="s2">"create_time"</span><span class="p">:</span><span class="w">  </span><span class="s2">"This is the date and time the dispute was first created on the GPN system"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"closed_time"</span><span class="p">:</span><span class="w">  </span><span class="s2">"This is the date and time the dispute was closed on the GPN system"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"status"</span><span class="p">:</span><span class="w">   </span><span class="s2">"This ientifies where the Dsipute is in it's lifecycle NEW  OPEN  CLOSED"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"type_id"</span><span class="p">:</span><span class="w">  </span><span class="s2">"GPN generated unique id that identifies this Dispute Type. This distinguishes between Inquiry  Chargeback and Representments that belong to the same dispute. It would have different evidence and depsoit info associated with it"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This indicates the type of Dispute it is CHARGEBACK  INQUIRY REPRESENTMENT"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"deposit_id"</span><span class="p">:</span><span class="w">   </span><span class="s2">"GPN Generated unique reference for the Deposit the Disputes relates to"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"document_id"</span><span class="p">:</span><span class="w">  </span><span class="s2">"GPN generated unique id that identifies the documents used to challenge the dispute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"notification_id"</span><span class="p">:</span><span class="w">  </span><span class="s2">"GPN generated unique id that identifies the notification sent to the Organisation by GPN to communicate a dispute event"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"case_fee"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fee incurred the organisationt for processing this dispute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"respond-by_date"</span><span class="p">:</span><span class="w">  </span><span class="s2">"This is the date and time the organisation needs to respond to GPN in relation to a dispute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"stage_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GPN generated unique id that identifies this Dispute stage for this dispute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"stage_name"</span><span class="p">:</span><span class="w">   </span><span class="s2">"The GPN name for this stage"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"stage_description"</span><span class="p">:</span><span class="w">    </span><span class="s2">"THe GPN description of this stage"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"stage_time"</span><span class="p">:</span><span class="w">   </span><span class="s2">"This is the date and time the dispute was updated to this stage"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"amount"</span><span class="p">:</span><span class="w">   </span><span class="s2">"This is the amount that was disputed. Not necessarily the amount that affected merchants bank account"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Currency of the amount being disputed"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"customer_amount"</span><span class="p">:</span><span class="w">  </span><span class="s2">"This is the amount that was disputed in cardholder's currency"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"customer_currency"</span><span class="p">:</span><span class="w">    </span><span class="s2">"Cardholder's currency"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"stage_amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is the amount that actually affected the merchant's bank account. It may not be the amount that was oringially disputed"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"stage_currency"</span><span class="p">:</span><span class="w">   </span><span class="s2">"Currency of the amount being disputed"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"reason_code"</span><span class="p">:</span><span class="w">  </span><span class="s2">"The dispute reason code"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"reason_description"</span><span class="p">:</span><span class="w">   </span><span class="s2">"The description associated with the dispute reason code"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"processor_comment"</span><span class="p">:</span><span class="w">    </span><span class="s2">"The comment inputted by GPN for this dispute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"issuer_comment"</span><span class="p">:</span><span class="w">   </span><span class="s2">"The comment inputted by customer's bank for this dispute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"issuer_id"</span><span class="p">:</span><span class="w">    </span><span class="s2">"The customer's bank reference for this dispute"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"request_history"</span><span class="p">:</span><span class="w">  </span><span class="s2">"Record Request history that were asscociated/ applied to this Dispute e.g. accept  challenge.This shows the lifecycle of the Dipsute and the actions that were recorded against it"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"request_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"THe type of the request associated with this resource"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"request_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The date the request was initiated"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"request_result"</span><span class="p">:</span><span class="w">   </span><span class="s2">"The result of the request; inidcated whether it was successful or not"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"request_status"</span><span class="p">:</span><span class="w">   </span><span class="s2">"The status of the Dispute after the request executed"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"request_result_data"</span><span class="p">:</span><span class="w">  </span><span class="s2">"Key Info returned in the request response."</span><span class="p">,</span><span class="w">
+
+</span></code></pre>
 <p>Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.</p>
 
 <p><strong>Organisation Types</strong></p>
