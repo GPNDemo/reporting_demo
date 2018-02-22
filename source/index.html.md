@@ -23,14 +23,14 @@ Each instance of a Resource has a unique **Global Payments ID**. This is a Globa
 
 
 ## Organisation
+
 ```json
 {
   "id": 11sdfsdfsdf,
   "deleted" : adsflkjhaskdljfhskaldjfh,
-  deleted : "adsflkjhaskdljfhskaldjfh",
   "d" : 234,
+  deleted : "adsflkjhaskdljfhskaldjfh",
   213234: "sdfsdf234234"
-  
 }
 ```
 
