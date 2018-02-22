@@ -1,4 +1,22 @@
-<h1 id='resources'>Resources</h1>
+<h2 id='lt-lt-lt-lt-lt-lt-lt-head'>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h2>
+<p>title: API Reference</p>
+
+<p>language_tabs: # must be one of https://git.io/vQNgJ
+  - PHP
+  - Java
+  - javascript: Node.js
+  - Ruby
+  - REST
+  - shell: cURL
+  - SOAP</p>
+
+<p>toc_footers:
+  - Global Payments Powering Payments
+  - <a href='https://www.globalpaymentsinc.com'>www.globalpaymentsinc.com</a></p>
+
+<p>includes:
+  - errors</p>
+<h2 id='search-true'>search: true</h2><h1 id='resources'>Resources</h1>
 <p>Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.</p>
 
 <p>Resources can have a <strong>Status</strong>, a <strong>Type</strong>, <strong>Data</strong> and <strong>Relationships</strong> to other resources. </p>
@@ -629,3 +647,668 @@ Remember — authentication is key!
 <td>The ID of the key to delete</td>
 </tr>
 </tbody></table>
+<h2 id='1a8c837ea3'>=======</h2>
+<p>title: API Reference</p>
+
+<p>language_tabs: # must be one of https://git.io/vQNgJ
+  - PHP
+  - Java
+  - javascript: Node.js
+  - Ruby
+  - REST
+  - shell: cURL
+  - SOAP</p>
+
+<p>toc_footers:
+  - Global Payments Powering Payments
+  - <a href='https://www.globalpaymentsinc.com'>www.globalpaymentsinc.com</a></p>
+
+<p>includes:
+  - errors</p>
+<h2 id='search-true-2'>search: true</h2><h1 id='resources-2'>Resources</h1>
+<p>Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.</p>
+
+<p>Resources can have a <strong>Status</strong>, a <strong>Type</strong>, <strong>Data</strong> and <strong>Relationships</strong> to other resources. </p>
+
+<p><strong>Requests</strong> are actions that are taken to affect Resources.</p>
+
+<p>Each instance of a Resource has a unique <strong>Global Payments ID</strong>. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.</p>
+<h2 id='organisation-2'>Organisation</h2>
+<p>Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.</p>
+
+<p><strong>Organisation Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MERCHANT</td>
+<td>An Organisation which has a contractual relationship with Global Payments for the provision of financial payment services, and/or technical payment services.</td>
+</tr>
+<tr>
+<td>MARKETPLACE</td>
+<td>An Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments&#39; services. Merchants contract with Marketplaces.</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>Organisation which has a contractual relationship with Global Payments to resell or refer Global Payments&#39; services. Merchants contract with ISOs.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Organisation Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CREATED</td>
+<td>This indicates that an Organisation has been created. The Organisation cannot be used to process real payments until it is updated to a status of ACTIVE-LIVE.</td>
+</tr>
+<tr>
+<td>ACTIVE LIVE</td>
+<td>This indicates that an Organisation  is in live mode can can be used to process real transactions.</td>
+</tr>
+<tr>
+<td>ACTIVE TEST</td>
+<td>This indicates that an Organisation is it test mode and that any activity against the Organisation  will be considered testing and real funds will never be processed.</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>This indicates that the Organisation  can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity.</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>Indicating that an Organisation  was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Organisation Requests</strong> 
+These are the actions that can be taken to a Global Payments Organisation.</p>
+<h3 id='create-7'><em>create</em></h3>
+<p>Used to create a new Organisation on Global Payments&#39; system.</p>
+<h3 id='read-9'><em>read</em></h3>
+<p>Used to retrieve information about an existing Organisation.</p>
+<h3 id='update-8'><em>update</em></h3>
+<p>Used to update information about an existing Organisation.</p>
+<h2 id='account-2'>Account</h2>
+<p>A representation of a data needed to configure an Organisation to process payments. Typically this would information such as Organisation Deposit Bank Accounts, Allowed Functionality for that Account, Payment Method Specific details e.g. For Cards it would be the MID and TID.</p>
+
+<p><strong>Account Types</strong></p>
+
+<p><strong>Account Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CREATED</td>
+<td>This indicates that an Account has been created. It cannot be used to process real payments until it is updated to a status of ACTIVE-LIVE.</td>
+</tr>
+<tr>
+<td>ACTIVE LIVE</td>
+<td>This indicates that an Account is in live mode can can be used to process real transactions.</td>
+</tr>
+<tr>
+<td>ACTIVE TEST</td>
+<td>This indicates that an Account is it test mode and that any activity against the Account will be considered testing and real funds will never be processed.</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>This indicates that the Account can no longer be used for payment processing. These resources are never deleted to maintain integrity and a record of historical activity.</td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td>Indicating that an Account was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an account for an Organisation.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Account Requests</strong>
+These are the actions that can be taken to Global Payments Organisations&#39; Accounts.</p>
+<h3 id='create-8'><em>create</em></h3>
+<p>Used to create a new Account on Global Payments&#39; system</p>
+<h3 id='read-10'><em>read</em></h3>
+<p>Used to retrieve information about an existing Account.</p>
+<h3 id='update-9'><em>update</em></h3>
+<p>Used to update information about an existing Account.</p>
+<h2 id='transaction-2'>Transaction</h2>
+<p>An act to attempt the transfer of funds between the Customer and the Merchant. </p>
+
+<p><strong>Transaction Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PAYMENT</td>
+<td>Payment is a transaction between a Customer and a Merchant in which the transfer of funds goes from the Customer to the Merchant</td>
+</tr>
+<tr>
+<td>REFUND</td>
+<td>A Refund is a transaction between a Customer and a Merchant in which the transfer of funds goes from the Merchant to the Customer. There can be different types of Refund Transactions; for example ones that are linked to a previous Payment transaction and ones that are standalone.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Transaction Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>PREAUTHORISED</td>
+<td></td>
+</tr>
+<tr>
+<td>OPEN_BATCH</td>
+<td></td>
+</tr>
+<tr>
+<td>VOIDED</td>
+<td></td>
+</tr>
+<tr>
+<td>BATCHED</td>
+<td></td>
+</tr>
+<tr>
+<td>DEPOSITED</td>
+<td></td>
+</tr>
+<tr>
+<td>DISPUTED</td>
+<td></td>
+</tr>
+<tr>
+<td>DECLINED</td>
+<td></td>
+</tr>
+<tr>
+<td>ERROR</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>Transaction Requests</strong></p>
+<h3 id='authorise-2'><em>authorise</em></h3>
+<p>Organisation initiated request to Authorise a transaction. If authorised successfully and flagged for auto-capture then the transaction would be have an OPEN-BATCH Status.  If successfully authorised and not flagged for auto-capture then the transaction would be have a PREAUTHORISED Status. A separate capture request is needed to move the transactions from a PREAUTHORISED status to an OPEN-BATCH status.</p>
+<h3 id='cancel-2'><em>cancel</em></h3>
+<p>Organisation initiated request to void a transaction. This can be applied to successful authorised/preauthorised transactions and stops the transaction from going further in its&#39; lifecycle.
+This request must be executed before the Transaction has a status of BATCHED</p>
+<h3 id='refund-2'><em>refund</em></h3>
+<p>Organisation initiated request to Refund a Customer money. This can be linked to an previous Payment transaction or a standalone where it does not link to a previous Payment Transaction.</p>
+<h3 id='adjust-2'><em>adjust</em></h3>
+<p>Organisation initiated request to change the amount of a transaction that has a status of PREAUTHORISED or OPEN-BATCH. e.g. to add a tip.
+This request must be executed before the Transaction has a status of BATCHED</p>
+<h3 id='capture-2'><em>capture</em></h3>
+<p>Organisation initiated request to start the process of moving funds between the Customer and the Organisation. It changes a transaction with a status of PREAUTHORISED to have a status of OPEN-BATCH. </p>
+<h3 id='hold-2'><em>hold</em></h3>
+<p>This is an organisation initiated request which If a transaction has an Open Batch status then putting it on hold removes it from the Open Batch but does not void the transaction. This could be used to pause a transaction for being processed in a Batch to check inventory or do fraud analysis</p>
+<h3 id='release-2'><em>release</em></h3>
+<p>If a Transaction has a current status of HELD then a release request will re-assign it a status of Open-Batch</p>
+<h3 id='force-2'><em>force</em></h3>
+<p>This is a request initiated by an Organisation that puts a transaction directly into an Open-Batch status and does not request an Authorisation/PreAuthorisation via the processor as the authcode has been attained elsewhere.</p>
+<h3 id='close-batch-2'>close-batch</h3>
+<p>Where does this sit? Do we need a Batch Resource</p>
+<h3 id='read-11'>read</h3>
+<p>Used to retrieve information about an existing Transaction or group of Transactions.</p>
+<h3 id='update-10'>update</h3>
+<p>Used to update information about an existing Transaction. <em>Can this incorporate adjust, cancel, hold, release?</em></p>
+<h2 id='deposit-2'>Deposit</h2>
+<p>The initiation of a Debit or a Credit to a Merchant&#39;s Bank Account that relates to Transactions and Disputes processed via Global Payments or fees charged by Global Payments to the Organisation. </p>
+
+<p><strong>Deposit Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SPLIT</td>
+<td>THe Deposi</td>
+</tr>
+</tbody></table>
+
+<p><strong>Deposit Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>DELAYED</td>
+<td>The Deposit is been held in a Global Payments account for a period of time before being transferred to an Organisation&#39;s account.</td>
+</tr>
+<tr>
+<td>RESERVED</td>
+<td>The Deposit is been held in a Global Payments account where it will be reviewed before it is released to an Organisation&#39;s account.</td>
+</tr>
+<tr>
+<td>DEPOSITED</td>
+<td>The Deposit has been initiated to an Organisation&#39;s bank account.</td>
+</tr>
+</tbody></table>
+<h2 id='dispute-2'>Dispute</h2>
+<p>An act, initiated by the Customer or their bank, to get more information about that transaction or to challenge a transaction with a view to reverse the transfer of funds between that Customer and the Merchant.</p>
+
+<p><strong>Dispute Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>INQUIRY</td>
+<td>An inquiry is a request for additional information on a transaction to validate the sale prior to the transaction being disputed. Normally the signed sales draft of the transaction is sufficient to resolve an inquiry request with the issuer. Not all disputes go through the inquiry phase first, majority of cardholder disputes are chargebacks and not retrievals.</td>
+</tr>
+<tr>
+<td>CHARGEBACK</td>
+<td>A dispute is created when a cardholder has a disagreement on a merchant processed transaction or the issuing bank has identified a transaction that was processed out of compliance. This results in a return of funds from the merchant to the cardholder. There can be many cycles of a dispute if the issuer and acquirer can&#39;t easily resolve the dispute case.</td>
+</tr>
+<tr>
+<td>REPRESENTMENT</td>
+<td>A reversal of a previous chargeback where the merchant has provided sufficient evidence to challenge the chargeback that results in the funds being returned to the merchant.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Dispute Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OPEN</td>
+<td>When a Dispute has been raised and merchant action is required.</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>When a Dispute is awaiting an update from the processor.</td>
+</tr>
+<tr>
+<td>CLOSED</td>
+<td>The dispute has been finalised with a result indicating whether the merchant has been successful in challenging the</td>
+</tr>
+</tbody></table>
+
+<p><strong>Dispute  Requests</strong></p>
+<h3 id='notify-2'><em>notify</em></h3>
+<p>Global Payments will notify you of new disputes or changes to existing disputes with a status of PENDING.</p>
+<h3 id='challenge-2'><em>challenge</em></h3>
+<p>Organisation initiated request to provide evidence of a transaction related to a dispute.</p>
+<h3 id='read-12'><em>read</em></h3>
+<p>Organisation initiated request to return information related to a Dispute.</p>
+<h3 id='accept-2'><em>accept</em></h3>
+<p>Organisation initiated request to accept a chargeback. An organisation understands that money has left their account related to the associated transaction and that the dispute cannot be challenged further by the organisation.</p>
+<h2 id='customer-2'>Customer</h2>
+<p>A consumer or business, who does not typically have a contractual relationship with Global Payments, who wishes to engage in transactions with a Merchant. Customers buy products or services from a Merchant.</p>
+
+<p><strong>Customer Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>BUSINESS</td>
+<td>The customer in this case is a business and is involved in a B2B relationship with a Global Payments&#39; Organisation.</td>
+</tr>
+<tr>
+<td>CONSUMER</td>
+<td>The customer in this case is a consumer and is involved in a B2C relationship with a Global Payments&#39; Organisation.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Customer Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACTIVE</td>
+<td>This indicates that a Customer is active and can be used to process real transactions with.</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>This indicates that a Customer can no longer be used for payment processing. The Customer resource is never deleted to maintain integrity and a record of historical activity.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Customer  Requests</strong></p>
+<h3 id='create-9'><em>create</em></h3>
+<p>Used to create a new Customer on Global Payments&#39; system</p>
+<h3 id='read-13'><em>read</em></h3>
+<p>Used to retrieve information about an existing Customer.</p>
+<h3 id='update-11'><em>update</em></h3>
+<p>Used to update information about an existing Customer.</p>
+<h2 id='payment-method-2'>Payment Method</h2>
+<p>A payment instrument own by the Customer used in transactions to Global Payments for the purposes of Sale and Refund Transactions.</p>
+
+<p><strong>Payment Method Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CARD</td>
+<td>The payment instrument is a Customer&#39;s debit or credit card where a PAN and expiry date are stored securely by Global Payments.</td>
+</tr>
+<tr>
+<td>BANK ACCOUNT</td>
+<td>The payment instrument is a Customer&#39;s bank account based payment method where a sort code/routing number and bank account number are stored securely by Global Payments.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Payment Method Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ACTIVE</td>
+<td>This indicates that the Payment Method is active and can be used to process real transactions with.</td>
+</tr>
+<tr>
+<td>DISABLED</td>
+<td>This indicates that the Payment Method can no longer be used for payment processing.</td>
+</tr>
+</tbody></table>
+
+<p><strong>Payment Method Requests</strong></p>
+<h3 id='create-10'><em>create</em></h3>
+<p>Used to create a new Payment Method on the Global Payments&#39; system</p>
+<h3 id='read-14'><em>read</em></h3>
+<p>Used to retrieve information about an existing Payment Method.</p>
+<h3 id='update-12'><em>update</em></h3>
+<p>Used to update information about an existing Payment Method.</p>
+<h2 id='order-2'>ORDER</h2>
+<p>An Order is representation of an amount owed by a Customer to a Merchant. It has an amount and currency. An Order may be associated with multiple Transactions.</p>
+
+<p><strong>ORDER Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>STANDALONE</td>
+<td>A once off standalone Order.</td>
+</tr>
+<tr>
+<td>RECURRING</td>
+<td>An Order that requires a sequence of scheduled transactions to complete successfully, dictated by a Global Payments&#39; Payment Schedule.</td>
+</tr>
+</tbody></table>
+
+<p><strong>ORDER Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OPEN</td>
+<td>The Order is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Order but the amount has not been wholly or partially fulfilled.</td>
+</tr>
+<tr>
+<td>FULFILLED</td>
+<td>The amount has been fulfilled with one or more transactions.</td>
+</tr>
+<tr>
+<td>CLOSED</td>
+<td>The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.</td>
+</tr>
+</tbody></table>
+
+<p><strong>ORDER  Requests</strong></p>
+<h3 id='create-11'><em>create</em></h3>
+<p>Used to create a new Order on the Global Payments&#39; system</p>
+<h3 id='read-15'><em>read</em></h3>
+<p>Used to retrieve information about an existing Order.</p>
+<h3 id='update-13'><em>update</em></h3>
+<p>Used to update information about an existing Order.</p>
+<h2 id='payment-schedule-2'>PAYMENT SCHEDULE</h2>
+<p>A schedule of Transactions or Orders that need to be fulfilled.</p>
+
+<p><strong>PAYMENT SCHEDULE Types</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Type</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>STANDALONE</td>
+<td></td>
+</tr>
+<tr>
+<td>RECURRING</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p><strong>PAYMENT SCHEDULE Statuses</strong></p>
+
+<table><thead>
+<tr>
+<th><strong><em>Status</em></strong></th>
+<th><strong><em>Description</em></strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OPEN</td>
+<td>The Order is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Order but the amount has not been wholly or partially fulfilled.</td>
+</tr>
+<tr>
+<td>FULFILLED</td>
+<td>The amount has been fulfilled with one or more transactions.</td>
+</tr>
+<tr>
+<td>CLOSED</td>
+<td>The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.</td>
+</tr>
+</tbody></table>
+
+<p><strong>PAYMENT SCHEDULE  Requests</strong></p>
+<h3 id='create-12'><em>create</em></h3>
+<p>Used to create a new Order on the Global Payments&#39; system</p>
+<h3 id='read-16'><em>read</em></h3>
+<p>Used to retrieve information about an existing Order.</p>
+<h3 id='update-14'><em>update</em></h3>
+<p>Used to update information about an existing Order.</p>
+<h1 id='version-2'>Version</h1><h2 id='get-all-report-obs-2'>Get All Report OBs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">r_eng</span><span class="p">.</span><span class="nf">get</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">gp_rep</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'success'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">r_eng</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/r_eng"</span>
+  -H <span class="s2">"Authorization: success"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">gp_rep</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gp_rep'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">gp_rep</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'success'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">r_eng</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">r_eng</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"batch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/01/2017"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fee1"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deduction1"</span><span class="p">:</span><span class="w"> </span><span class="mi">-2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"batch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/01/2017"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fee1"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deduction1"</span><span class="p">:</span><span class="w"> </span><span class="mi">-2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all report objects.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://example.com/api/report1234</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>include_cats</td>
+<td>false</td>
+<td>If set to true, the result will also include cats.</td>
+</tr>
+<tr>
+<td>available</td>
+<td>true</td>
+<td>If set to false, the result will include r_eng that have already been adopted.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — authentication is key!
+</aside>
+<h2 id='get-a-specific-key-2'>Get a Specific key</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">r_eng</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">gp_rep</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'success'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">r_eng</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/r_eng/2"</span>
+  -H <span class="s2">"Authorization: success"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">gp_rep</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gp_rep'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">gp_rep</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'success'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">r_eng</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"batch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/01/2017"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fee1"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"deduction1"</span><span class="p">:</span><span class="w"> </span><span class="mi">-2</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific key.</p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://example.com/r_eng/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the key to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-key-2'>Delete a Specific key</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'gp_rep'</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'success'</span><span class="p">)</span>
+<span class="n">api</span><span class="p">.</span><span class="nf">r_eng</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">gp_rep</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">gp_rep</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'success'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">r_eng</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/r_eng/2"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: success"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">gp_rep</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gp_rep'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">gp_rep</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'success'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">r_eng</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific key.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>DELETE http://example.com/r_eng/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the key to delete</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>3f9627186a5cc4f422f4e43884825fcbcfc0214e</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
