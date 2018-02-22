@@ -2,7 +2,7 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - json: Response
+  - json: "Example Response"
 
 toc_footers:
   - Powering Payments Globally
