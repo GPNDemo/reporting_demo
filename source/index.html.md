@@ -26,9 +26,9 @@ Each instance of a Resource has a unique **Global Payments ID**. This is a Globa
 ```json
 {
   "id": 11sdfsdfsdf,
-  "deleted" : adsflkjhaskdljfhskaldjfh
-  deleted : "adsflkjhaskdljfhskaldjfh"
-  "d" : 234
+  "deleted" : adsflkjhaskdljfhskaldjfh,
+  deleted : "adsflkjhaskdljfhskaldjfh",
+  "d" : 234,
   213234: "sdfsdf234234"
   
 }
@@ -59,12 +59,6 @@ ERROR | Indicating that an Organisation was not successfully created or updated.
  
 This is the data that can be associated with a Global Payments' Organisation.
 
-```json
-{
-  "id": 243234234,
-  "deleted" : "adsflkjhaskdljfhskaldjfh"
-}
-```
 
 **Organisation Requests** 
 These are the actions that can be taken to a Global Payments Organisation.
