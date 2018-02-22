@@ -24,17 +24,6 @@ Each instance of a Resource has a unique **Global Payments ID**. This is a Globa
 
 ## Organisation
 
-```json
-{
-  "id": 11sdfsdfsdf,
-  "deleted" : adsflkjhaskdljfhskaldjfh,
-  "d" : 234,
-  deleted : "adsflkjhaskdljfhskaldjfh",
-  213234: "sdfsdf234234"
-}
-```
-
-
 Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.
 
 **Organisation Types**
