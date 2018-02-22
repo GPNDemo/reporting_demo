@@ -22,7 +22,7 @@ Each instance of a Resource has a unique **Global Payments ID**. This is a Globa
 
 
 
-## Organisation
+## Organiasdadasdsation
 
 Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.
 
