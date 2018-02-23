@@ -416,73 +416,8 @@
 <p>Each instance of a Resource has a unique <strong>Global Payments ID</strong>. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.</p>
 <h2 id='organisations'>Organisations</h2>
 <p><a name="org"></a></p>
-<pre class="highlight python tab-python"><code><span class="c">#GPN generated unique id that uniquely identifies this Dispute.</span>
-<span class="s">"id"</span><span class="p">:</span>   <span class="s">"dispute_2432342dsssdflksjdlfkj"</span><span class="p">,</span>
-<span class="c">#This is the date and time the dispute was first created on the GPN system</span>
-<span class="s">"create_time"</span><span class="p">:</span>  <span class="s">"43159.4407986111"</span><span class="p">,</span>
-<span class="c">#This is the date and time the dispute was closed on the GPN system</span>
-<span class="s">"closed_time"</span><span class="p">:</span>  <span class="s">"43187.4407986111"</span><span class="p">,</span>
-<span class="c">#This identifies where the Dsipute is in it's lifecycle NEW  OPEN  CLOSED</span>
-<span class="s">"status"</span><span class="p">:</span>   <span class="s">"CLOSED"</span><span class="p">,</span>
-<span class="c">#GPN generated unique id that identifies </span>
-<span class="c"># - the Organisation this dispute relates to</span>
-<span class="s">"organisation_id"</span><span class="p">:</span>  <span class="s">"org_87868677wrewerwflksjdlfkj"</span><span class="p">,</span>
-<span class="c">#GPN generated unique id  that links to the associate</span>
-<span class="c"># -d Organisation's Account information for this Dsipute</span>
-<span class="s">"account_id"</span><span class="p">:</span>   <span class="s">"account_832563ksduskjdbfkjsd"</span><span class="p">,</span>
-<span class="c">#GPN Generated unique reference for this transaction this dispute relates to</span>
-<span class="s">"transaction_id"</span><span class="p">:</span>   <span class="s">"trns_174562629hdhsmdhsfsdf1"</span><span class="p">,</span>
-<span class="c">#GPN generated unique id that identifies this Dispute Type. </span>
-<span class="s">"type_id"</span><span class="p">:</span>  <span class="s">"distype_72234324234jdbfkjsd"</span><span class="p">,</span>
-<span class="c">#This indicates the type of Dispute it is CHARGEBACK  INQUIRY REPRESENTMENT</span>
-<span class="s">"type"</span><span class="p">:</span> <span class="s">"CHARGEBACK"</span><span class="p">,</span>
-<span class="c">#GPN Generated unique reference for the Deposit the Disputes relates to</span>
-<span class="s">"deposit_id"</span><span class="p">:</span>   <span class="s">"deposit_2389712983123234423"</span><span class="p">,</span>
-<span class="c">#GPN generated unique id that identifies t</span>
-<span class="c"># -he documents used to challenge the dispute</span>
-<span class="s">"document_id"</span><span class="p">:</span>  <span class="s">"doc_asd2389712983123234423"</span><span class="p">,</span>
-<span class="c">#GPN generated unique id that identifies the notification se</span>
-<span class="c"># -nt to the Organisation by GPN to communicate a dispute event</span>
-<span class="s">"notification_id"</span><span class="p">:</span>  <span class="s">"not_asdfsadf89y32esabfkfjasdfa"</span><span class="p">,</span>
-<span class="c">#Fee incurred by the organisationt for processing this dispute</span>
-<span class="s">"case_fee"</span><span class="p">:</span> <span class="s">"2500"</span><span class="p">,</span>
-<span class="c">#Currency of Dispute Fee</span>
-<span class="s">"respond-by_date"</span><span class="p">:</span>  <span class="s">"USD"</span><span class="p">,</span>
-<span class="c">#This is the date and time the organisation ne</span>
-<span class="c"># -eds to respond to GPN in relation to a dispute</span>
-<span class="s">"stage_id"</span><span class="p">:</span> <span class="s">"43169.5241319445"</span><span class="p">,</span>
-<span class="c">#GPN generated unique id that identifies this Dispute stage for this dispute</span>
-<span class="s">"stage_name"</span><span class="p">:</span>   <span class="s">"stg_aslkdnkasjhfwiwasdfsyesadf"</span><span class="p">,</span>
-<span class="c">#The GPN name for this stage</span>
-<span class="s">"stage_description"</span><span class="p">:</span>    <span class="s">"MERCHANT_RESOLVED"</span><span class="p">,</span>
-<span class="c">#THe GPN description of this stage</span>
-<span class="s">"stage_time"</span><span class="p">:</span>   <span class="s">"Merchant lost the dispute case"</span><span class="p">,</span>
-<span class="c">#This is the date and time the dispute was updated to this stage</span>
-<span class="s">"amount"</span><span class="p">:</span>   <span class="s">"43187.4407986111"</span><span class="p">,</span>
-<span class="s">"currency"</span><span class="p">:</span> <span class="s">"6500"</span><span class="p">,</span>
-<span class="c">#Currency of the amount being disputed</span>
-<span class="s">"customer_amount"</span><span class="p">:</span>  <span class="s">"USD"</span><span class="p">,</span>
-<span class="c">#This is the amount that was disputed in cardholder's currency</span>
-<span class="s">"customer_currency"</span><span class="p">:</span>    <span class="s">"8000"</span><span class="p">,</span>
-<span class="c">#Cardholder's currency</span>
-<span class="s">"stage_amount"</span><span class="p">:</span> <span class="s">"EUR"</span><span class="p">,</span>
-<span class="c">#This is the amount that actually affected the merchant's bank </span>
-<span class="c"># - account. It may not be the amount that was oringially disputed</span>
-<span class="s">"stage_currency"</span><span class="p">:</span>   <span class="s">"5000"</span><span class="p">,</span>
-<span class="c">#Currency of the amount being disputed</span>
-<span class="s">"reason_code"</span><span class="p">:</span>  <span class="s">"USD"</span><span class="p">,</span>
-<span class="c">#The dispute reason code</span>
-<span class="s">"reason_description"</span><span class="p">:</span>   <span class="s">"4342"</span><span class="p">,</span>
-<span class="c">#The description associated with the dispute reason code</span>
-<span class="s">"processor_comment"</span><span class="p">:</span>    <span class="s">"Did Not Authenticate"</span><span class="p">,</span>
-<span class="c">#The comment inputted by GPN for this dispute</span>
-<span class="s">"issuer_comment"</span><span class="p">:</span>   <span class="s">"Need proof of transactions from merchant"</span><span class="p">,</span>
-<span class="c">#The comment inputted by customer's bank for this dispute</span>
-<span class="s">"issuer_id"</span><span class="p">:</span>    <span class="s">"Cardholder expects fraud"</span><span class="p">,</span>
-<span class="c">#The customer's bank reference for this dispute </span>
-<span class="p">[</span><span class="n">I</span><span class="s">'m an inline-style link with title](https://www.google.com "Google'</span><span class="n">s</span> <span class="n">Homepage</span><span class="s">")</span><span class="err">
-</span><span class="s">"</span><span class="n">request_history</span><span class="s">":  "</span><span class="n">SRD092340932u4f</span><span class="s">",</span><span class="err">
-</span></code></pre>
+<pre class="highlight python tab-python"><code><span class="c">#</span>
+</code></pre>
 <p>Organisations are typically businesses that have a contracted with Global Payments. Global Payments provides payment processing solutions to Organisations. Organisations can be Merchants, ISO, ISVs, VARs or Marketplaces. Organisations can be owned by Global Payments.</p>
 
 <p><strong>Organisation Types</strong></p>
@@ -719,76 +654,87 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 <h3 id='read-4'><em>read</em></h3>
 <p>Used to retrieve information about an existing Deposit or group of Deposits.</p>
 <h2 id='dispute'>Dispute</h2>
-<blockquote>
-<p>Hello <a href="#org">org</a></p>
-</blockquote>
+<p>Hello <a href="#org">org</a>
+Hello <a href="#org">org</a></p>
 <pre class="highlight python tab-python"><code><span class="c">#GPN generated unique id that uniquely identifies this Dispute.</span>
-<span class="s">"id"</span><span class="p">:</span>   <span class="s">"dispute_2432342dsssdflksjdlfkj"</span><span class="p">,</span>
+    <span class="s">"id"</span><span class="p">:</span>   <span class="s">"dispute_2432342dsssdflksjdlfkj"</span><span class="p">,</span>
 <span class="c">#This is the date and time the dispute was first created on the GPN system</span>
-<span class="s">"create_time"</span><span class="p">:</span>  <span class="s">"43159.4407986111"</span><span class="p">,</span>
+    <span class="s">"create_time"</span><span class="p">:</span>  <span class="s">"43159.4407986111"</span><span class="p">,</span>
 <span class="c">#This is the date and time the dispute was closed on the GPN system</span>
-<span class="s">"closed_time"</span><span class="p">:</span>  <span class="s">"43187.4407986111"</span><span class="p">,</span>
+    <span class="s">"closed_time"</span><span class="p">:</span>  <span class="s">"43187.4407986111"</span><span class="p">,</span>
 <span class="c">#This identifies where the Dsipute is in it's lifecycle NEW  OPEN  CLOSED</span>
-<span class="s">"status"</span><span class="p">:</span>   <span class="s">"CLOSED"</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span>   <span class="s">"CLOSED"</span><span class="p">,</span>
 <span class="c">#GPN generated unique id that identifies </span>
 <span class="c"># - the Organisation this dispute relates to</span>
-<span class="s">"organisation_id"</span><span class="p">:</span>  <span class="s">"org_87868677wrewerwflksjdlfkj"</span><span class="p">,</span>
+    <span class="s">"organisation_id"</span><span class="p">:</span>  <span class="s">"org_87868677wrewerwflksjdlfkj"</span><span class="p">,</span>
 <span class="c">#GPN generated unique id  that links to the associate</span>
 <span class="c"># -d Organisation's Account information for this Dsipute</span>
-<span class="s">"account_id"</span><span class="p">:</span>   <span class="s">"account_832563ksduskjdbfkjsd"</span><span class="p">,</span>
+    <span class="s">"account_id"</span><span class="p">:</span>   <span class="s">"account_832563ksduskjdbfkjsd"</span><span class="p">,</span>
 <span class="c">#GPN Generated unique reference for this transaction this dispute relates to</span>
-<span class="s">"transaction_id"</span><span class="p">:</span>   <span class="s">"trns_174562629hdhsmdhsfsdf1"</span><span class="p">,</span>
+    <span class="s">"transaction_id"</span><span class="p">:</span>   <span class="s">"trns_174562629hdhsmdhsfsdf1"</span><span class="p">,</span>
 <span class="c">#GPN generated unique id that identifies this Dispute Type. </span>
-<span class="s">"type_id"</span><span class="p">:</span>  <span class="s">"distype_72234324234jdbfkjsd"</span><span class="p">,</span>
+    <span class="s">"type_id"</span><span class="p">:</span>  <span class="s">"distype_72234324234jdbfkjsd"</span><span class="p">,</span>
 <span class="c">#This indicates the type of Dispute it is CHARGEBACK  INQUIRY REPRESENTMENT</span>
-<span class="s">"type"</span><span class="p">:</span> <span class="s">"CHARGEBACK"</span><span class="p">,</span>
+    <span class="s">"type"</span><span class="p">:</span> <span class="s">"CHARGEBACK"</span><span class="p">,</span>
 <span class="c">#GPN Generated unique reference for the Deposit the Disputes relates to</span>
-<span class="s">"deposit_id"</span><span class="p">:</span>   <span class="s">"deposit_2389712983123234423"</span><span class="p">,</span>
+    <span class="s">"deposit_id"</span><span class="p">:</span>   <span class="s">"deposit_2389712983123234423"</span><span class="p">,</span>
 <span class="c">#GPN generated unique id that identifies t</span>
 <span class="c"># -he documents used to challenge the dispute</span>
-<span class="s">"document_id"</span><span class="p">:</span>  <span class="s">"doc_asd2389712983123234423"</span><span class="p">,</span>
+    <span class="s">"document_id"</span><span class="p">:</span>  <span class="s">"doc_asd2389712983123234423"</span><span class="p">,</span>
 <span class="c">#GPN generated unique id that identifies the notification se</span>
 <span class="c"># -nt to the Organisation by GPN to communicate a dispute event</span>
-<span class="s">"notification_id"</span><span class="p">:</span>  <span class="s">"not_asdfsadf89y32esabfkfjasdfa"</span><span class="p">,</span>
+    <span class="s">"notification_id"</span><span class="p">:</span>  <span class="s">"not_asdfsadf89y32esabfkfjasdfa"</span><span class="p">,</span>
 <span class="c">#Fee incurred by the organisationt for processing this dispute</span>
-<span class="s">"case_fee"</span><span class="p">:</span> <span class="s">"2500"</span><span class="p">,</span>
+    <span class="s">"case_fee"</span><span class="p">:</span> <span class="s">"2500"</span><span class="p">,</span>
 <span class="c">#Currency of Dispute Fee</span>
-<span class="s">"respond-by_date"</span><span class="p">:</span>  <span class="s">"USD"</span><span class="p">,</span>
+    <span class="s">"case_fee_currency"</span><span class="p">:</span>    <span class="s">"USD"</span><span class="p">,</span>
 <span class="c">#This is the date and time the organisation ne</span>
 <span class="c"># -eds to respond to GPN in relation to a dispute</span>
-<span class="s">"stage_id"</span><span class="p">:</span> <span class="s">"43169.5241319445"</span><span class="p">,</span>
+    <span class="s">"respond-by_date"</span><span class="p">:</span>  <span class="s">"43169.5241319445"</span><span class="p">,</span>
 <span class="c">#GPN generated unique id that identifies this Dispute stage for this dispute</span>
-<span class="s">"stage_name"</span><span class="p">:</span>   <span class="s">"stg_aslkdnkasjhfwiwasdfsyesadf"</span><span class="p">,</span>
+    <span class="s">"stage_id"</span><span class="p">:</span> <span class="s">"stg_aslkdnkasjhfwiwasdfsyesadf"</span><span class="p">,</span>
 <span class="c">#The GPN name for this stage</span>
-<span class="s">"stage_description"</span><span class="p">:</span>    <span class="s">"MERCHANT_RESOLVED"</span><span class="p">,</span>
+    <span class="s">"stage_name"</span><span class="p">:</span>   <span class="s">"MERCHANT_RESOLVED"</span><span class="p">,</span>
 <span class="c">#THe GPN description of this stage</span>
-<span class="s">"stage_time"</span><span class="p">:</span>   <span class="s">"Merchant lost the dispute case"</span><span class="p">,</span>
+    <span class="s">"stage_description"</span><span class="p">:</span>    <span class="s">"Merchant lost the dispute case"</span><span class="p">,</span>
 <span class="c">#This is the date and time the dispute was updated to this stage</span>
-<span class="s">"amount"</span><span class="p">:</span>   <span class="s">"43187.4407986111"</span><span class="p">,</span>
-<span class="s">"currency"</span><span class="p">:</span> <span class="s">"6500"</span><span class="p">,</span>
+    <span class="s">"stage_time"</span><span class="p">:</span>   <span class="s">"43187.4407986111"</span><span class="p">,</span>
+    <span class="s">"amount"</span><span class="p">:</span>   <span class="s">"6500"</span><span class="p">,</span>
 <span class="c">#Currency of the amount being disputed</span>
-<span class="s">"customer_amount"</span><span class="p">:</span>  <span class="s">"USD"</span><span class="p">,</span>
+    <span class="s">"currency"</span><span class="p">:</span> <span class="s">"USD"</span><span class="p">,</span>
 <span class="c">#This is the amount that was disputed in cardholder's currency</span>
-<span class="s">"customer_currency"</span><span class="p">:</span>    <span class="s">"8000"</span><span class="p">,</span>
+    <span class="s">"customer_amount"</span><span class="p">:</span>  <span class="s">"8000"</span><span class="p">,</span>
 <span class="c">#Cardholder's currency</span>
-<span class="s">"stage_amount"</span><span class="p">:</span> <span class="s">"EUR"</span><span class="p">,</span>
+    <span class="s">"customer_currency"</span><span class="p">:</span>    <span class="s">"EUR"</span><span class="p">,</span>
 <span class="c">#This is the amount that actually affected the merchant's bank </span>
 <span class="c"># - account. It may not be the amount that was oringially disputed</span>
-<span class="s">"stage_currency"</span><span class="p">:</span>   <span class="s">"5000"</span><span class="p">,</span>
+    <span class="s">"stage_amount"</span><span class="p">:</span> <span class="s">"5000"</span><span class="p">,</span>
 <span class="c">#Currency of the amount being disputed</span>
-<span class="s">"reason_code"</span><span class="p">:</span>  <span class="s">"USD"</span><span class="p">,</span>
+    <span class="s">"stage_currency"</span><span class="p">:</span>   <span class="s">"USD"</span><span class="p">,</span>
 <span class="c">#The dispute reason code</span>
-<span class="s">"reason_description"</span><span class="p">:</span>   <span class="s">"4342"</span><span class="p">,</span>
+    <span class="s">"reason_code"</span><span class="p">:</span>  <span class="s">"4342"</span><span class="p">,</span>
 <span class="c">#The description associated with the dispute reason code</span>
-<span class="s">"processor_comment"</span><span class="p">:</span>    <span class="s">"Did Not Authenticate"</span><span class="p">,</span>
+    <span class="s">"reason_description"</span><span class="p">:</span>   <span class="s">"Did Not Authenticate"</span><span class="p">,</span>
 <span class="c">#The comment inputted by GPN for this dispute</span>
-<span class="s">"issuer_comment"</span><span class="p">:</span>   <span class="s">"Need proof of transactions from merchant"</span><span class="p">,</span>
+    <span class="s">"processor_comment"</span><span class="p">:</span>    <span class="s">"Need proof of transactions from merchant"</span><span class="p">,</span>
 <span class="c">#The comment inputted by customer's bank for this dispute</span>
-<span class="s">"issuer_id"</span><span class="p">:</span>    <span class="s">"Cardholder expects fraud"</span><span class="p">,</span>
-<span class="c">#The customer's bank reference for this dispute </span>
-<span class="p">[</span><span class="n">I</span><span class="s">'m an inline-style link with title](https://www.google.com "Google'</span><span class="n">s</span> <span class="n">Homepage</span><span class="s">")</span><span class="err">
-</span><span class="s">"</span><span class="n">request_history</span><span class="s">":  "</span><span class="n">SRD092340932u4f</span><span class="s">",</span><span class="err">
-</span></code></pre>
+    <span class="s">"issuer_comment"</span><span class="p">:</span>   <span class="s">"Cardholder expects fraud"</span><span class="p">,</span>
+<span class="c">#The customer's bank reference for this dispute</span>
+    <span class="s">"issuer_id"</span><span class="p">:</span>    <span class="s">"SRD092340932u4f"</span><span class="p">,</span>
+<span class="c">#Record Request history that were asscociated/ applied to this Dispute e.g. accept  challe</span>
+<span class="c"># -enge.This shows the lifecycle of the Dispute and the actions that were recorded against it</span>
+    <span class="s">"request_history"</span><span class="p">:</span>  <span class="s">""</span><span class="p">,</span>
+<span class="c">#The type of the request associated with this resource</span>
+    <span class="s">"request_type"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+<span class="c">#The date the request was initiated</span>
+    <span class="s">"request_date"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+<span class="c">#The result of the request; inidcated whether it was successful or not</span>
+    <span class="s">"request_result"</span><span class="p">:</span>   <span class="s">""</span><span class="p">,</span>
+<span class="c">#The status of the Dispute after the request executed</span>
+    <span class="s">"request_status"</span><span class="p">:</span>   <span class="s">""</span><span class="p">,</span>
+<span class="c">#Key Info returned in the request response.</span>
+    <span class="s">"request_result_data"</span><span class="p">:</span>  <span class="s">""</span><span class="p">,</span>
+</code></pre>
 <p>An act, initiated by the Customer or their bank, to get more information about that transaction or to challenge a transaction with a view to reverse the transfer of funds between that Customer and the Merchant.</p>
 
 <p><strong>Dispute Types</strong></p>
