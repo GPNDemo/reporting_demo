@@ -241,9 +241,6 @@
                       <!-- adding third level, check js and css -->
                         <ul class="toc-list-h3">
                             <li>
-                              <a href="#data" class="toc-h3 toc-link" data-title="Resources">data</a>
-                            </li>
-                            <li>
                               <a href="#create" class="toc-h3 toc-link" data-title="Resources"><em>create</em></a>
                             </li>
                             <li>
@@ -366,7 +363,7 @@
                         </ul>
                     </li>
                     <li>
-                      <a href="#order" class="toc-h2 toc-link" data-title="order">Order</a>
+                      <a href="#open-payment" class="toc-h2 toc-link" data-title="open-payment">Open Payment</a>
                       <!-- adding third level, check js and css -->
                         <ul class="toc-list-h3">
                             <li>
@@ -407,13 +404,15 @@
         <div class="dark-box"></div>
         <div class="content">
           <h1 id='resources'>Resources</h1>
-<p>Resources ensure there is a common understanding of our product throughout our organisation and a common terminology when we communicate internally and to the market.  Resources inform the features we need to build to solve our customers’ problems.</p>
+<p>The goal of this stream is to define the entities in the payments landscape that GPN and GPN’s customers interact with to process payments.  These Resources inform the product/features we need to build to solve our customers’ problems. While being defined in the context of an API Programme, the definition of our Resources will influence many of our products.</p>
+
+<p>Resources ensure there is a common consistent understanding of our product throughout our organisation and the market we serve.  Resources inform the features we need to build to solve our customers’ problems.</p>
 
 <p>Resources can have a <strong>Status</strong>, a <strong>Type</strong>, <strong>Data</strong> and <strong>Relationships</strong> to other resources. </p>
 
 <p><strong>Requests</strong> are actions that are taken to affect Resources.</p>
 
-<p>Each instance of a Resource has a unique <strong>Global Payments ID</strong>. This is a Global Payments reference that uniquely identifies the resource on the Global Payments system.</p>
+<p>Each instance of a Resource has a unique <strong>Global Payments ID</strong>. This is a Global Payments reference that uniquely identifies the resource instance on the Global Payments system.</p>
 <h2 id='organisations'>Organisations</h2>
 <p><a name="org"></a></p>
 <pre class="highlight python tab-python"><code><span class="c">#</span>
@@ -471,8 +470,6 @@
 <td>Indicating that an Organisation was not successfully created or updated. An example would be a required information missing resulting in an error when trying to create an Organisation.</td>
 </tr>
 </tbody></table>
-<h3 id='data'>data</h3>
-<p>This is the data that can be associated with a Global Payments&#39; Organisation.</p>
 
 <p><strong>Organisation Requests</strong> 
 These are the actions that can be taken to a Global Payments Organisation.</p>
@@ -654,8 +651,7 @@ This request must be executed before the Transaction has a status of BATCHED</p>
 <h3 id='read-4'><em>read</em></h3>
 <p>Used to retrieve information about an existing Deposit or group of Deposits.</p>
 <h2 id='dispute'>Dispute</h2>
-<p>Hello <a href="#org">org</a>
-Hello <a href="#org">org</a></p>
+<p>Hello <a href="#org">org</a></p>
 <pre class="highlight python tab-python"><code><span class="c">#GPN generated unique id that uniquely identifies this Dispute.</span>
     <span class="s">"id"</span><span class="p">:</span>   <span class="s">"dispute_2432342dsssdflksjdlfkj"</span><span class="p">,</span>
 <span class="c">#This is the date and time the dispute was first created on the GPN system</span>
@@ -882,10 +878,10 @@ Hello <a href="#org">org</a></p>
 <p>Used to retrieve information about an existing Payment Method.</p>
 <h3 id='update-5'><em>update</em></h3>
 <p>Used to update information about an existing Payment Method.</p>
-<h2 id='order'>Order</h2>
-<p>An Order is representation of an amount owed by a Customer to a Merchant. It has an amount and currency. An Order may be associated with multiple Transactions.</p>
+<h2 id='open-payment'>Open Payment</h2>
+<p>An Open Payment is representation of an amount owed by a Customer to a Merchant. It has an amount and currency. An Open Payment may be associated with multiple Transactions.</p>
 
-<p><strong>Order Types</strong></p>
+<p><strong>Open Payment Types</strong></p>
 
 <table><thead>
 <tr>
@@ -895,15 +891,15 @@ Hello <a href="#org">org</a></p>
 </thead><tbody>
 <tr>
 <td>STANDALONE</td>
-<td>A once off standalone Order.</td>
+<td>A once off standalone Open Payment.</td>
 </tr>
 <tr>
 <td>RECURRING</td>
-<td>An Order that requires a sequence of scheduled transactions to complete successfully, dictated by a Global Payments&#39; Payment Schedule.</td>
+<td>An Open Payment that requires a sequence of scheduled transactions to complete successfully, dictated by a Global Payments&#39; Payment Schedule.</td>
 </tr>
 </tbody></table>
 
-<p><strong>Order Statuses</strong></p>
+<p><strong>Open Payment Statuses</strong></p>
 
 <table><thead>
 <tr>
@@ -913,7 +909,7 @@ Hello <a href="#org">org</a></p>
 </thead><tbody>
 <tr>
 <td>OPEN</td>
-<td>The Order is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Order but the amount has not been wholly or partially fulfilled.</td>
+<td>The Open Payment is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Open Payment but the amount has not been wholly or partially fulfilled.</td>
 </tr>
 <tr>
 <td>FULFILLED</td>
@@ -921,19 +917,19 @@ Hello <a href="#org">org</a></p>
 </tr>
 <tr>
 <td>CLOSED</td>
-<td>The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.</td>
+<td>The Open Payment has been closed due to the Open Payment expiring before the Open Payment is fulfilled or the Open Payment being specifically closed by the Organisation.</td>
 </tr>
 </tbody></table>
 
-<p><strong>Order  Requests</strong></p>
+<p><strong>Open Payment  Requests</strong></p>
 <h3 id='create-5'><em>create</em></h3>
-<p>Used to create a new Order on the Global Payments&#39; system</p>
+<p>Used to create a new Open Payment on the Global Payments&#39; system</p>
 <h3 id='read-8'><em>read</em></h3>
-<p>Used to retrieve information about an existing Order.</p>
+<p>Used to retrieve information about an existing Open Payment.</p>
 <h3 id='update-6'><em>update</em></h3>
-<p>Used to update information about an existing Order.</p>
+<p>Used to update information about an existing Open Payment.</p>
 <h2 id='payment-schedule'>Payment Schedule</h2>
-<p>A schedule of Transactions or Orders that need to be fulfilled.</p>
+<p>A schedule of Transactions or Open Payments that need to be fulfilled.</p>
 
 <p><strong>Payment Schedule Types</strong></p>
 
@@ -963,7 +959,7 @@ Hello <a href="#org">org</a></p>
 </thead><tbody>
 <tr>
 <td>OPEN</td>
-<td>The Order is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Order but the amount has not been wholly or partially fulfilled.</td>
+<td>The Open Payment is still open and not yet fulfilled. One or more transactions may have been executed to fulfill the Open Payment but the amount has not been wholly or partially fulfilled.</td>
 </tr>
 <tr>
 <td>FULFILLED</td>
@@ -971,17 +967,17 @@ Hello <a href="#org">org</a></p>
 </tr>
 <tr>
 <td>CLOSED</td>
-<td>The Order has been closed due to the Order expiring before the Order is fulfilled or the Order being specifically closed by the Organisation.</td>
+<td>The Open Payment has been closed due to the Open Payment expiring before the Open Payment is fulfilled or the Open Payment being specifically closed by the Organisation.</td>
 </tr>
 </tbody></table>
 
 <p><strong>Payment Schedule Requests</strong></p>
 <h3 id='create-6'><em>create</em></h3>
-<p>Used to create a new Order on the Global Payments&#39; system</p>
+<p>Used to create a new Open Payment on the Global Payments&#39; system</p>
 <h3 id='read-9'><em>read</em></h3>
-<p>Used to retrieve information about an existing Order.</p>
+<p>Used to retrieve information about an existing Open Payment.</p>
 <h3 id='update-7'><em>update</em></h3>
-<p>Used to update information about an existing Order.</p>
+<p>Used to update information about an existing Open Payment.</p>
 
         </div>
         <div class="dark-box">
